@@ -8,6 +8,9 @@
 .chat_sec{
     width: 100%;
     margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .chat_sec h1{
     padding: 1rem;
@@ -15,42 +18,63 @@
 
 }
 .chat_inp{
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
+    border: 1px solid rgba(0,0,0,0.25);
+    width: 70%;
+    margin: 1rem;
 }
-.chat_inp input{
-    width: 20rem;
-    height: 2.1rem;
-    outline: none;
+
+.chat_inp textarea{
+    height: 5rem;
+    width: inherit;
+    margin: 1rem ;
+    outline-color: rgb(7, 106, 245);
     border-radius: 0.4rem;
-    border: none;
-    background-color: rgba(0, 0, 0,0.1);
+    border:2px solid ;
+    /* background-color: rgba(0, 0, 0,0.1); */
     padding: 0 1rem;
 }
 .chat_inp button{
-    margin:0  1rem;
+    margin:0.5rem 1rem;
     width: 4rem;
     border-radius: 0.4rem;
     border: none;
     height: 2.1rem;
     cursor: pointer;
+    background-color: blue;
+    color: #fff;
 }
 .chat_box{
-    border: 1px solid rgba(0,0,0,0.4);
-    width: 100%;
+    /* border: 1px solid rgba(0,0,0,0.4); */
+    width: 75%;
     padding: 1rem;
     box-sizing: border-box;
-   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+
 }
 
-.chat_bar{
-    border: 1px solid greenyellow;
+
+.query_box{
+    border: 1px solid rgba(0,0,0,0.4);
+    width: 90%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.query_box div{
     margin: 1rem;
-    width: 40%;
+}
+.query_box button{
+    width: 4rem;
+    height: 2rem;
+    
+    background-color: rgb(5, 5, 211);
+    color: #fff;
+    border: none;
     cursor: pointer;
-    padding:0.6rem 1rem;
-    border-radius: 0.2rem 1.4rem 0.2rem 0.2rem;
 
 }
