@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/chat.css">
 </head>
+
 <body>
     <nav>
         <ul>
@@ -15,25 +17,48 @@
             <li>chats</li>
         </ul>
     </nav>
-    
+
     <section class="chat_sec">
         <div class="replyPopup">
             <p class="popPara">0</p>
             <textarea placeholder="enter something.." name=""></textarea><br>
             <button class="popBtn" onclick="removePop()">add</button>
         </div>
-            <div>
-                <h1>Post your any fitness query here..</h1>
-            </div>
-            <div class="chat_inp">
-                <textarea placeholder="enter your query.."></textarea><br>
-                <button class="createBtn"  >post</button>
-            </div>
-            <div class="chat_box">
-        
-            </div>
-            
+        <div>
+            <h1>Post your any fitness query here..</h1>
+        </div>
+        <div class="chat_inp">
+            <textarea placeholder="enter your query.."></textarea><br>
+            <button class="createBtn">post</button>
+        </div>
+        <div class="chat_box">
+
+        </div>
+
     </section>
+    <footer>
+        <div class="footerlogo">
+            <img src="./img/logo.jfif" alt="logo"> &nbsp;
+            Fit Bucket
+        </div>
+        <div>
+            <span>Useful Links</span>
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <form action="">
+                <p><label for="feedback">Send Feedback</label></p>
+                <textarea name="feedback" id="feedback" cols="40" rows="5" placeholder="Write something..."
+                    style="text-align: center;"></textarea>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </footer>
 </body>
 <script src="js/chat.js"></script>
+
 </html>
