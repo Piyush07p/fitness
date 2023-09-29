@@ -46,6 +46,11 @@ footer div span{
 }
 
 footer div  form textarea{
+    color: white;
+    background-color: rgb(50, 45, 97);
+    padding: 0.5rem;
+    width: 400px;
+    height: 100px;
     border-radius: 9px;
     border: none;
 }
@@ -79,5 +84,10 @@ footer form{
     *{
         font-size: 12px !important;
     }
+    footer div  form textarea{
+        width:300px;
+        height: 80px;
+    }
+
  
 }
