@@ -23,6 +23,9 @@ createBtn.addEventListener("click",function(e){
 
     chatInp.value=""
     showChats();
+    for(let i=0;i<chatObj.length;i++){
+        showReply(i);
+    }
 })
 
 // function to show the query
@@ -38,7 +41,7 @@ function showChats(){
     chatObj.forEach(function(elem,ind){
         html+=`
         <div class="query_box">
-              <div>
+              <div class="queryDiv">
                   <p>${elem}</p>
               </div>
               <div>
@@ -90,7 +93,7 @@ function showReplyUL(flag,ind){
 // function to delete the chats
 
 function deleteChats(index){
-    localStorage.removeItem("replies")
+   localStorage.removeItem(`replies${index}`)
    let chats=localStorage.getItem("chats")
     if(chats==null){
         chatObj=[];
@@ -100,6 +103,12 @@ function deleteChats(index){
     chatObj.splice(index,1);
     localStorage.setItem("chats",JSON.stringify(chatObj));
     showChats()
+
+    //calling the function to fetch all the replies
+    // stored in localstorage
+    for(let i=0;i<chatObj.length;i++){
+        showReply(i);
+    }
 }
 
 // function for showing the replyPopup
@@ -109,6 +118,10 @@ function replyfunc(ind){
     popPara.innerHTML=ind
     let replyPopup=document.querySelector('.replyPopup')
     replyPopup.style.top="10rem";
+
+    let chatSecDiv=document.querySelector('.chat_inp')
+    chatSecDiv.classList.toggle('active')
+
     
 }
 
@@ -116,6 +129,7 @@ function replyfunc(ind){
 
 function removePop(){
     let replyPopup=document.querySelector('.replyPopup')
+    
     let replyTarea=document.querySelector('.replyPopup textarea')
     let popPara=document.querySelector('.popPara')
     
@@ -134,9 +148,14 @@ function removePop(){
     replyObj.push(replyTarea.value)
     localStorage.setItem(`replies${replyindex}`,JSON.stringify(replyObj));
     
+    let chatSecDiv=document.querySelector('.chat_inp')
+    chatSecDiv.classList.toggle('active')
+
     replyTarea.value=""
-    replyPopup.style.top="-10rem";
+    replyPopup.style.top="-12rem";
     showReply(replyindex);
+
+    
 }
 
     for(let i=0;i<chatObj.length;i++){
