@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/home.css">
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -25,7 +28,6 @@
             </div>
         </nav>
     </header>
-    <br>
     
     <section class="chat_sec">
         <div class="replyPopup">
@@ -33,18 +35,47 @@
             <textarea placeholder="enter something.." name=""></textarea><br>
             <button class="popBtn" onclick="removePop()">add</button>
         </div>
-            <div>
-                <h1>Post your any fitness query here..</h1>
-            </div>
-            <div class="chat_inp">
-                <textarea placeholder="enter your query.."></textarea><br>
-                <button class="createBtn"  >post</button>
-            </div>
-            <div class="chat_box">
-        
-            </div>
-            
+        <div>
+            <h1>Post your any fitness query here..</h1>
+        </div>
+        <div class="chat_inp">
+            <textarea placeholder="enter your query.."></textarea><br>
+            <button class="createBtn">post</button>
+        </div>
+        <div class="chat_box">
+
+        </div>
+
     </section>
+    <footer>
+        <div id="footer-content">
+        <div class="footerlogo">
+            <img src="./img/logo.jfif" alt="logo"> &nbsp;
+            Fit Bucket
+        </div>
+        <div>
+            <span>Useful Links</span>
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <form action="">
+                <p><label for="feedback">Send Feedback</label></p>
+                <textarea name="feedback" id="feedback" placeholder="Write something..."></textarea>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+        </div>
+        
+        <div id="copyright">
+            <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
+            Fit Bucket 2023
+        </div>
+    </footer>
 </body>
 <script src="js/chat.js"></script>
+
 </html>
