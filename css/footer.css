@@ -1,0 +1,90 @@
+
+footer{
+    bottom: 0;
+    background-color: rgb(11, 3, 82);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    max-width: 100% !important;
+}
+
+#footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 9rem;
+    flex-wrap: wrap;
+}
+
+footer div img{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: blue;
+}
+
+footer div ul li{
+    list-style-type: none;
+    line-height: 1.4rem;
+}
+
+footer div ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer div span{
+    font-size: 1.1em;
+    line-height: 2rem;
+}
+.footerlogo{
+    display: flex;
+    align-items: center;
+}
+
+footer div  form textarea{
+    color: white;
+    background-color: rgb(50, 45, 97);
+    padding: 0.5rem;
+    width: 400px;
+    height: 100px;
+    border-radius: 9px;
+    border: none;
+    margin-top: 0.4rem;
+}
+
+footer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #submit{
+    border: none;
+    margin-top: 0.55rem;
+    border-radius: 25px;
+    height: 2rem;
+    width: 5rem;
+}
+#copyright{
+    color: #a6a5a5;
+    margin-left: 2rem;
+}
+@media screen and (max-width: 700px){
+    
+    footer{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    *{
+        font-size: 12px !important;
+    }
+    footer div  form textarea{
+        width:300px;
+        height: 80px;
+    }
+
+ 
+}
