@@ -4,18 +4,21 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --trans:all 0.5s ease;
+}
 .replyPopup{
    width: 30rem;
    border: 1px solid rgba(0,0,0,0.3);
    border-radius: 0.6rem;
-   height: 10rem;
+   height: 12rem;
    top: -12rem;
    background-color: #fff;
    position: fixed;
    display: flex;
    flex-direction: column;
    align-items: center;
-   transition: 0.5s ease all;
+   transition: var(--trans);
    z-index: 2;
 }
 
@@ -27,7 +30,15 @@
 .replyPopup button{
     width: 6rem;
     height: 2rem;
+    margin: 1rem 0;
     cursor: pointer;
+    transition: var(--trans)
+}
+.replyPopup button:hover{
+    border-radius: 1rem;
+    border: none;
+    background-color: blue;
+    color: #fff;
 }
 
 .chat_sec{
@@ -76,7 +87,7 @@
 }
 .chat_box{
     /* border: 1px solid rgba(0,0,0,0.4); */
-    width: 75%;
+    width: 80%;
     padding: 1rem;
     box-sizing: border-box;
    display: flex;
@@ -101,23 +112,31 @@
 .query_box button{
     width: 4rem;
     height: 2rem;
-    
-    background-color: rgb(5, 5, 211);
+    border-radius: 0.4rem;
+    background-color: rgb(0,0,0,0.5);
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: all 0.5s ease;
 
+}
+.query_box button:hover{
+    border-radius: 1rem;
 }
 
 .replies-div{
     display: flex;
 }
 .replies-div input{
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     width: 4rem;
     height: 1.3rem;
     cursor: pointer;
-
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(0,0,0,0.5);
 }
 .replyUL{
     margin:0  1rem;
@@ -127,7 +146,9 @@
     margin:0.3rem 1rem;
     list-style:circle;
     border: 1px solid rgba(0,0,0,0.4);
-    padding: 0.2rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 1rem;
+    background-color: rgb(225, 250, 251);
 
 }
 
