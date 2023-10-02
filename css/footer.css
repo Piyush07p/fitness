@@ -1,10 +1,10 @@
 
 footer{
-    bottom: 0;
-    background-color: rgb(11, 3, 82);
+    
+    background-color: #12486B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    max-width: 100% !important;
+    
 }
 
 #footer-content{
@@ -15,12 +15,6 @@ footer{
     flex-wrap: wrap;
 }
 
-footer div img{
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    background-color: blue;
-}
 
 footer div ul li{
     list-style-type: none;
@@ -39,6 +33,11 @@ footer div span{
 .footerlogo{
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+}
+.footerlogo img{
+    width: 5rem;
 }
 
 footer div  form textarea{
@@ -82,7 +81,7 @@ footer #submit{
         font-size: 12px !important;
     }
     footer div  form textarea{
-        width:280px;
+        width:300px;
         height: 80px;
     }
 
