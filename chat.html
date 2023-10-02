@@ -39,7 +39,7 @@
             <h1>Post your any fitness query here..</h1>
         </div>
         <div class="chat_inp">
-            <textarea placeholder="enter your query.."></textarea><br>
+            <textarea  id="textInpData"  placeholder="enter your query.."></textarea><br>
             <button class="createBtn">post</button>
         </div>
         <div class="chat_box">
@@ -71,6 +71,71 @@
         
     </footer>
 </body>
-<script src="js/chat.js"></script>
+<!-- <script src="js/chat.js"></script> -->
+<script src="js/crud.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+
+<script src="fireConfig.js"></script>
+<script type="module">
+    
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCXEdHe1CrCLeRQP4cfdw5OwMiXCFafnOY",
+      authDomain: "fitnessquery-64b66.firebaseapp.com",
+      databaseURL: "https://fitnessquery-64b66-default-rtdb.firebaseio.com",
+      projectId: "fitnessquery-64b66",
+      storageBucket: "fitnessquery-64b66.appspot.com",
+      messagingSenderId: "545468630248",
+      appId: "1:545468630248:web:109c35bed1a8c73efd755d"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import {getDatabase,ref,get,set,child,update,remove} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+    const db=getDatabase()
+
+    let query=document.querySelector('#textInpData');
+    
+    function insertData(){
+    
+        set(ref(db,"queryData/"+query.value),{
+            queries:query.value,
+        })
+        .then(()=>{
+            alert("data stored successfully")
+        })
+        .catch((err)=>{
+            alert("error"+err);
+        })
+        query.value=""
+        fetchData()
+    }
+    fetchData()
+    function fetchData(){
+        const fData=ref(db);
+        get(child(fData,"queryData/"+"kuch bhi")).then((snap)=>{
+            if(snap.exists()){
+                let chatBox=document.querySelector('.chat_box')
+                let newDiv=document.createElement('div')
+                newDiv.innerHTML=snap.val().queries;
+                chatBox.appendChild(newDiv)
+
+            }else{
+                alert("no data found");
+            }
+        })
+        .catch((err)=>{
+            alert("error"+err)
+        });
+    }
+
+    let createBtn=document.querySelector('.createBtn')
+    createBtn.addEventListener('click',insertData)
+  </script>
 
 </html>
