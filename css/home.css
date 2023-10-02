@@ -62,8 +62,8 @@ body {
     color: #3498DB;
   }
   
-  #slider_section {
-    background-image: url('https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60'); /* Add your background image URL */
+  #slider_section{
+    background-image:url(https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60); /* Add your background image URL */
     background-size: cover;
     background-position: center;
     height: 100vh;
