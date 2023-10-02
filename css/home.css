@@ -4,7 +4,11 @@ body {
     font-family: Arial;
     margin: 0;
   }
-  
+  :root{
+    --btnWidth:6rem;
+    --btnHeight:2rem;
+    --btnBgcolor:#12486B
+  }
   .navbar {
     /* background-color: hsl(212, 17%, 85%); */
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -73,4 +77,61 @@ body {
   .slider_div p {
     font-size: 1.5em;
     margin-bottom: 80px;
+  }
+
+  .feature_sec{
+    width: 100%;
+    height: 30rem;
+
+  }
+  .feature_sec h1{
+     text-align: center;    
+  }
+  .feature_cont{
+      
+      padding: 1rem;
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  .feature_div{
+      width: 15rem;
+      display: flex;
+      margin: 1rem;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.2rem;
+      border: 2px solid rgba(0,0,0,0.3);
+      transition: all 0.5s ease;
+  }
+  .feature_div:hover{
+    transform: scale(1.05);
+  }
+  
+  .feature_div .div1{
+    height: 60%;
+  }
+  .feature_div .div1 img{
+    width: 100%;
+    height: 100%;
+  }
+  .feature_div .div2{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+  }
+  .feature_div .div2 button{
+    width: var(--btnWidth);
+    height: var(--btnHeight);
+    cursor: pointer;
+    background-color: var(--btnBgcolor);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    border: none;
+
   }
