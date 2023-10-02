@@ -81,7 +81,7 @@ body {
 
   .feature_sec{
     width: 100%;
-    height: 30rem;
+
 
   }
   .feature_sec h1{
@@ -94,6 +94,7 @@ body {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+     
   }
   .feature_div{
       width: 15rem;
@@ -102,7 +103,8 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 0.2rem;
-      border: 2px solid rgba(0,0,0,0.3);
+      /* border: 2px solid rgba(0,0,0,0.3); */
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
       transition: all 0.5s ease;
   }
   .feature_div:hover{
