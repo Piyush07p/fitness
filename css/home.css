@@ -1,0 +1,83 @@
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  .navbar {
+    /* background-color: hsl(212, 17%, 85%); */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    padding: 15px 0;
+    /* position: fixed; */
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+  
+  .container {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo{
+  
+    font-weight: bold;
+    color: #ECF0F1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .logo img{
+      margin: 0 1rem;
+      width: 5.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    /* color: #ECF0F1; */
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  .nav-links a:hover {
+    color: #3498DB;
+  }
+  
+  #hero-section {
+    background-image: url('https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: slider 10s infinite linear;
+  }
+
+  @keyframes slider {
+     0%{ background-image: url('https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');background-size: 100% 100% ; }
+
+     35%{ background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.scrolldroll.com%2Fwp-content%2Fuploads%2F2019%2F08%2FFitness-Quotes.jpg&tbnid=NTnRUa75TUoG2M&vet=12ahUKEwiX3bTR59aBAxUobmwGHY-xDQgQMyggegUIARCVAQ..i&imgrefurl=https%3A%2F%2Fwww.scrolldroll.com%2Ffitness-quotes%2Ffitness-quotes%2F&docid=g4FvZIZePt5VZM&w=1200&h=628&q=fitness%20images%20quotes&ved=2ahUKEwiX3bTR59aBAxUobmwGHY-xDQgQMyggegUIARCVAQ');background-size: 100% 100% ;}
+
+     70%{ background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Fthumb_back%2Ffh260%2Fback_our%2F20190621%2Fourmid%2Fpngtree-simple-and-stylish-fitness-club-background-image_189691.jpg&tbnid=Ly1gVKYFCczhsM&vet=12ahUKEwjFrKWz6NaBAxWzcWwGHWSIBiEQMyhTegUIARCWAg..i&imgrefurl=https%3A%2F%2Fpngtree.com%2Ffree-backgrounds-photos%2Ffitness-club&docid=IItw--aW5pRRcM&w=714&h=260&q=finess%20and%20health%20%20hd%20images&ved=2ahUKEwjFrKWz6NaBAxWzcWwGHWSIBiEQMyhTegUIARCWAg'); background-size: 100% 100% ;}
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    margin-bottom: 80px;
+  }
