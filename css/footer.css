@@ -14,9 +14,8 @@ footer{
     min-height: 9rem;
     flex-wrap: wrap;
 }
-footer div ul{
-    padding-left: 0 ;
-}
+
+
 
 footer div ul li{
     list-style-type: none;
@@ -42,6 +41,16 @@ footer div span{
     width: 5rem;
 }
 
+footer div  form textarea{
+    color: white;
+    background-color: rgb(50, 45, 97);
+    padding: 0.5rem;
+    width: 400px;
+    height: 100px;
+    border-radius: 9px;
+    border: none;
+    margin-top: 0.4rem;
+}
 
 footer form{
     display: flex;
@@ -71,6 +80,10 @@ footer #submit{
 @media screen and (max-width: 600px){
     *{
         font-size: 12px !important;
+    }
+    footer div  form textarea{
+        width:300px;
+        height: 80px;
     }
 
  

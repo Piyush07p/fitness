@@ -58,43 +58,8 @@ body {
     font-size: 1.1em;
   }
   
-  .nav-links a:hover , #mySidebar a:hover{
+  .nav-links a:hover {
     color: #3498DB;
-  }
-
-  #sidebar{
-    display: none;
-    margin-right: 1.5rem;
-    background-color: white;
-    border: 1px solid black;
-  }
-
-  #mySidebar{
-    display: none;
-    flex-direction: column;
-    background-color:#fff;
-    position: absolute;
-    min-width: 40%;
-    height: 100vh;
-    top:0;
-    right: 0;
-    transition: all 1s;
-  }
-
-  #mySidebar a{
-    text-decoration: none;
-    margin-top: 2.5rem;
-    margin-left: 1rem;
-  }
-
-  #mySidebar button{
-    background-color: red;
-    height: 2.6rem;
-    color: #fff;
-    border: none;
-    margin:0;
-    padding: 0.4rem;
-    font-size: 1.2em;
   }
   
   #slider_section{
@@ -171,15 +136,4 @@ body {
     letter-spacing: 0.2rem;
     border: none;
 
-  }
-
-  @media screen and (max-width: 401px){
-    .nav-links ,.nav-links{
-      display: none;
-    }
-
-    #sidebar{
-      display: unset;
-    }
-    
   }

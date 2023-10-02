@@ -1,4 +1,4 @@
-import {sidebar_open ,sidebar_close} from "./index.js"
+
 let chatBox=document.querySelector('.chat_box')
 let chatInp=document.querySelector('.chat_inp textarea')
 let createBtn=document.querySelector('.createBtn')
