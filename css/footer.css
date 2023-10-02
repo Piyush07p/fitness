@@ -82,7 +82,7 @@ footer #submit{
         font-size: 12px !important;
     }
     footer div  form textarea{
-        width:280px;
+        width:100%;
         height: 80px;
     }
 
