@@ -14,7 +14,9 @@ footer{
     min-height: 9rem;
     flex-wrap: wrap;
 }
-
+footer div ul{
+    padding-left: 0 ;
+}
 
 footer div ul li{
     list-style-type: none;
