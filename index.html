@@ -38,7 +38,10 @@
         <section id="slider_section">
             <div class="slider_div">
                 <h1>Welcome to Fit Bucket</h1>
-                <p>Your path to a healthier, stronger you!</p>
+                <div>Your path to a</div>
+                <br>
+                <span id="element"></span>
+                <p>you</p>
             </div>
         </section>
 
@@ -121,5 +124,12 @@
     </footer>
     
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['HEALTHIER', 'STRONGER','BETTER'],
+      typeSpeed: 50,
+    });
+  </script>
 </body>
 </html>
