@@ -6,9 +6,35 @@
     <title>Conatct Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/sampark_kare.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body >
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img  src="images/fit_logo.png" alt="">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/chat.html">Fit Q&A</a></li>
+                    <li><a href="/blogs.html">Blog</a></li>
+                    <li><a href="/task.html">Tasks</a></li>
+                    <li><a href="/sampark.html">Contact Us</a></li>
+                </ul>
+                <button id="sidebar" onclick="sidebar_open()">☰</button>
+            </div>
+        </nav>
+        <div  id="mySidebar" >
+            <button onclick="sidebar_close()">Close &times;</button>
+            <a href="/">Home</a>
+            <a href="/chat.html">Fit Q&A</a>
+            <a href="/blogs.html">Blog</a>
+            <a href="/task.html">Tasks</a>
+            <a href="/sampark.html">Contact Us</a>
+          </div>
+    </header>
     <div class="container">
         <header>
             <h1>Contact Us</h1>
