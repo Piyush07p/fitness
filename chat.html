@@ -92,18 +92,22 @@
       messagingSenderId: "545468630248",
       appId: "1:545468630248:web:109c35bed1a8c73efd755d"
     };
+
+    
+    let createBtn=document.querySelector('.createBtn')
+    createBtn.addEventListener('click',insertData)
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
 
-    import {getDatabase,ref,get,set,child,update,remove} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+    import {getDatabase,ref,get,set,child,onValue,update,remove} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
     const db=getDatabase()
 
     let query=document.querySelector('#textInpData');
-    
+    let fireArray=[]
     function insertData(){
     
-        set(ref(db,"queryData/"+query.value),{
+        set(ref(db,"queryData/"+fireArray.length),{
             queries:query.value,
         })
         .then(()=>{
@@ -113,29 +117,74 @@
             alert("error"+err);
         })
         query.value=""
-        fetchData()
+    
     }
-    fetchData()
-    function fetchData(){
-        const fData=ref(db);
-        get(child(fData,"queryData/"+"kuch bhi")).then((snap)=>{
-            if(snap.exists()){
-                let chatBox=document.querySelector('.chat_box')
-                let newDiv=document.createElement('div')
-                newDiv.innerHTML=snap.val().queries;
-                chatBox.appendChild(newDiv)
+    let html=""
+    let chatBox=document.querySelector('.chat_box')
+    function addQueries(query,ind){
+       let newDiv=document.createElement('div')
+        html =`
+             <div >
+                 <div>
+                    <p>${query}</p> 
+                 </div>
+                 <div>
+                    <button >Reply</button>
+                    <button class="delQueryBtn" onclick="del(${ind})">Delete${ind}</button>
+                    </div>
+            </div>
 
-            }else{
-                alert("no data found");
-            }
+        `
+        newDiv.classList.add('queryBar')
+        newDiv.innerHTML=html
+        chatBox.appendChild(newDiv)
+        fireArray.push(chatBox.length)
+       
+    }
+    let delQueryBtn=document.querySelectorAll('.delQueryBtn')
+     
+    function delQuery(){
+      alert("he")
+        // remove(ref(db,"queryData/"+"kuch bhi"))
+        // .then(()=>{
+        //     alert("data deleted successfully");
+
+        // })
+        // .catch((err)=>{
+        //     alert("error:"+err)
+        // })
+    }
+
+
+     function AddAllItems(dataArray){
+            chatBox.innerHTML="";
+            dataArray.forEach(elem=>{
+                addQueries(elem.queries,fireArray.length)
+            })
+     }
+    function getAllDataOnce(){
+        const dbRef=ref(db);
+        get(child(dbRef,"queryData"))
+        .then((snap)=>{
+            var dataArray=[];
+            snap.forEach(childSnap=>{
+                dataArray.push(childSnap.val());
+            });
+            AddAllItems(dataArray);
         })
-        .catch((err)=>{
-            alert("error"+err)
-        });
     }
+   function getAlldataRealTime(){
+        const dbRef=ref(db,"queryData")
+        onValue(dbRef,(snap)=>{
+            var dataArray=[];
+            snap.forEach(childSnap=>{
+                dataArray.push(childSnap.val());
+            })
+            AddAllItems(dataArray);
+        })
+    }
+  window.onload=getAlldataRealTime;
 
-    let createBtn=document.querySelector('.createBtn')
-    createBtn.addEventListener('click',insertData)
   </script>
 
 </html>

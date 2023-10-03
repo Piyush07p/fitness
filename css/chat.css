@@ -97,9 +97,24 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
    flex-wrap: wrap;
 
 }
+.queryBar{
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 90%;
+    margin: 0.5rem 0;
+}
+.queryBar div{
+    padding: 1rem;
+}
+.queryBar div div button{
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
 
 
 .query_box{
