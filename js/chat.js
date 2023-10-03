@@ -193,11 +193,5 @@ function showReply(replyindex){
 
 }
 
-// Object.keys(localStorage).forEach((keys)=>{
-    
-//     let div=document.createElement('div'); 
-//     div.classList.add("chat_bar")
-//     div.innerHTML=`${localStorage.getItem(keys)}`
-//     chatBox.appendChild(div);
-// })
+
 

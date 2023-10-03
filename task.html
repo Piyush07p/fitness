@@ -23,8 +23,17 @@
                     <li><a href="/task.html">Tasks</a></li>
                     <li><a href="/sampark.html">Contact Us</a></li>
                 </ul>
+                <button id="sidebar" onclick="sidebar_open()">☰</button>
             </div>
         </nav>
+        <div  id="mySidebar" >
+            <button onclick="sidebar_close()">Close &times;</button>
+            <a href="/">Home</a>
+            <a href="/chat.html">Fit Q&A</a>
+            <a href="/blogs.html">Blog</a>
+            <a href="/task.html">Tasks</a>
+            <a href="/sampark.html">Contact Us</a>
+          </div>
     </header>
     <footer>
         <div id="footer-content">
@@ -49,5 +58,6 @@
         </div>
         
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>
