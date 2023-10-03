@@ -108,15 +108,22 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: slider 10s infinite linear;
+    animation: slider 20s infinite linear;
   }
 
   @keyframes slider {
-     0%{ background-image: url('https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');background-size: 100% 100% ; }
+     0%{ background-image: url('/images/slideImg1.jpg');background-size: 100% 100% ; }
+     16%{ background-image: url('/images/slideImg1.jpg');background-size: 100% 100% ; }
 
-     35%{ background-image: url('/images/sliderimg2.jpg');background-size: 100% 100% ;}
 
-     70%{ background-image: url('/images/sliderimg1.jpg'); background-size: 100% 100% ;}
+     32%{ background-image: url('/images/slideImg2.jpg');background-size: 100% 100% ;}
+     48%{ background-image: url('/images/slideImg2.jpg');background-size: 100% 100% ;}
+
+     63%{ background-image: url('/images/slideImg3.jpg'); background-size: 100% 100% ;}
+     79%{ background-image: url('/images/slideImg3.jpg'); background-size: 100% 100% ;}
+
+     100%{ background-image: url('/images/slideImg1.jpg');background-size: 100% 100% ; }
+
   }
   
   .slider_div p {
@@ -126,6 +133,7 @@ body {
 
   .feature_sec{
     width: 100%;
+    padding: 3rem 0;
 
 
   }
