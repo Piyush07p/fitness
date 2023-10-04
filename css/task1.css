@@ -1,7 +1,27 @@
 @import 'home.css';
 @import 'footer.css';
 
-.taskDescription{
+.taskBody{
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taskBgImg{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.taskBgImg img{
+
+    border-radius: 1rem;
+    border: 2px solid rgba(0,0,0,0.3);
+}
+.taskDescription{
+    border: 2px solid;
+    margin: 2rem 0;
+    border-radius: 2rem;
+    width:  80%;
+    padding: 2rem;
 }
