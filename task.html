@@ -25,7 +25,7 @@
                     <li><a href="/task.html">Tasks</a></li>
                     <li><a href="/sampark.html">Contact Us</a></li>
                 </ul>
-                <button id="sidebar" onclick="sidebar_open()">☰</button>
+                <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
             </div>
         </nav>
         <div id="mySidebar">
@@ -37,42 +37,62 @@
             <a href="/sampark.html">Contact Us</a>
         </div>
     </header>
+
+<!-- ----------------(end of navbar)------------------------ -->
+
     <main>
-        <div class="main-division">
-            <div class="tasks-sec">
+        <h3>Select Task</h3>
+        <div class="task-division">
+            <div class="task-div">
                 <a href=""><img class="images-task" src="images/weight gain.jpg" height="250px" width="250px"></a>
-                <a href="">
-                    <h3 class="heading-task">Weight Gain</h3>
+                <a href="taskhtml/task1.html">
+                    <button class="taskBtn">Weight Gain</button>
                 </a>
             </div>
-            <div class="tasks-sec">
+            <div class="task-div">
                 <a href=""><img class="images-task" src="images/weight loss.jpg" height="250px" width="250px"></a>
                 <a href="">
-                    <h3 class="heading-task">Weight Loss</h3>
+                    <button class="taskBtn">Weight Loss</button>
                 </a>
             </div>
-            <div class="tasks-sec">
+        
+            <div class="task-div">
                 <a href=""><img class="images-task" src="images/weight loss.jpg" height="250px" width="250px"></a>
                 <a href="">
-                    <h3 class="heading-task">75 Days</h3>
+                    <button class="taskBtn">30 days fitness</button>
                 </a>
             </div>
-            <div class="tasks-sec">
+            <div class="task-div">
                 <a href=""><img class="images-task" src="images/weight loss.jpg" height="250px" width="250px"></a>
                 <a href="">
-                    <h3 class="heading-task">30 Days</h3>
+                    <button class="taskBtn">Yoga</button>
+                </a>
+            </div>
+            <div class="task-div">
+                <a href=""><img class="images-task" src="images/weight loss.jpg" height="250px" width="250px"></a>
+                <a href="">
+                    <button class="taskBtn">Mental piece</button>
+                </a>
+            </div>
+            <div class="task-div">
+                <a href=""><img class="images-task" src="images/weight loss.jpg" height="250px" width="250px"></a>
+                <a href="">
+                    <button class="taskBtn">Boost Stamina</button>
                 </a>
             </div>
         </div>
     </main>
+
+    <!-- --------------------------(footer_started)-------------------------- -->
+
     <footer>
         <div id="footer-content">
 
             <div class="footerlogo">
                 <img src="./images/fit_logo.png" alt="logo">
-                <p>
+                <p>copyright
                     <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
-                    Fit Bucket 2023
+                    2023 Fit Bucket
                 </p>
             </div>
 

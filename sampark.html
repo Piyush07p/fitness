@@ -23,7 +23,7 @@
                     <li><a href="/task.html">Tasks</a></li>
                     <li><a href="/sampark.html">Contact Us</a></li>
                 </ul>
-                <button id="sidebar" onclick="sidebar_open()">☰</button>
+                <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
             </div>
         </nav>
         <div  id="mySidebar" >
@@ -35,23 +35,19 @@
             <a href="/sampark.html">Contact Us</a>
           </div>
     </header>
-    <div class="container">
+
+    <!-- --------------(navbar end)-------------------- -->
+
+    <section class="contact_sec">
         <header>
-            <h1>Contact Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam iure vitae nesciunt quaerat sed, et ullam placeat ut? Impedit dolorem nostrum itaque molestias nemo delectus animi fuga illum magnam earum pariatur reiciendis, explicabo id velit facilis, necessitatibus cum! Magnam.</p>
+            <h1>Contact us</h1>
+            <br>
+            <p>You can contact us for any fitness related queries by filling the form below with correct details</p>
+            <br>
         </header>
         <div class="content">
-            <div class="content-form">
-                <section>
-                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-                    <h2>address</h2>
-                    <p>
-                        Lorem ipsum dolor sit. <br>
-                        Lorem, ipsum dolor. <br>
-                        lorem
-                    </p>
-                </section>
-
+            <!-- <div class="content_detail">
+               
                 <section>
                     <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
                     <h2>Phone</h2>
@@ -61,46 +57,63 @@
                 <section>
                     <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
                     <h2>E-mail</h2>
-                    <p>fitbucket38547.net</p>
+                    <p>fitbucket38547@gmail.com</p>
                 </section>
-            </div>
-        </div>
-
+            </div> -->
+            
       <form>
-        <div class="form">
-            <div class="right">
-              <div class="contact-form">
-                  <input type="text" required>
-                  <span>Full Name</span>
-              </div>
-  
-              <div class="contact-form">
-                  <input type="E-mail" required>
-                  <span>E-mail Id</span>
-              </div>
-              <div class="contact-form">
-                  <textarea name="text">
-                    
-                  </textarea>
-                  <span> Type your Message....</span>
-              </div>
-  
-              <div class="contact-form">
-                  <input type="submit" name="submit">
-              </div>
-              </div>
-            </div>
+        <div class="formBox">
+           
+            <label>Full Name</label>
+                  <input placeholder="enter name" type="text" required>
+               
+                  <label>Email id</label>
+                  <input placeholder="enter email" type="E-mail" required>
+                  <label>Enter your Message...</label>
+                  <textarea placeholder="enter your message.." name="text"></textarea>
+                
+                  <input class="formBtn" type="submit" name="submit">
+
           </div>
     </form>
-        <div class="media">
+        </div>
+
+        <!-- <div class="media">
+           <ul>
             <li><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></li>
             <li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
             <li><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
             <li><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></li>
-        </div>
-        <div class="empty">
+           </ul>
+        </div> -->
+    
+    </section>   
+    
+     <!----------------- footer_code -------------->
 
+     <footer>
+        <div id="footer-content">
+
+        <div class="footerlogo">
+            <img  src="./images/fit_logo.png" alt="logo"> 
+            <p>copyright
+                <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
+                2023 Fit Bucket
+            </p>
         </div>
-    </div>    
+
+        <div>
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="/blogs.html">Blog</a></li>
+                <li><a href="/task.html">Tasks</a></li>
+                <li><a href="/sampark.html">Contact Us</a></li>
+            </ul>
+        </div>
+       
+        </div>
+        
+    </footer>
+    
 </body>
 </html>
