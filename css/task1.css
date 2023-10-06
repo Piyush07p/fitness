@@ -3,25 +3,114 @@
 
 .taskBody{
     width: 100%;
-    height: 100vh;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .taskBgImg{
-    width: 90%;
+    width: 70%;
+    height: 20rem;
     display: flex;
     justify-content: center;
 }
 .taskBgImg img{
-
+     width: 100%;
+     height: 100%;
     border-radius: 1rem;
     border: 2px solid rgba(0,0,0,0.3);
 }
 .taskDescription{
-    border: 2px solid;
+    
     margin: 2rem 0;
     border-radius: 2rem;
-    width:  80%;
+    width:  60%;
     padding: 2rem;
+    background-color:  hsl(212, 17%, 85%);
+    
+}
+.taskSchedule_sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+
+}
+.taskSchedule_div{
+  width: 100%;
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.taskBar{
+   /* border: 1px solid; */
+   box-shadow: -1px 0 3px rgba(0,0,0,0.7);
+   width: 62%;
+   margin: 1rem;
+   border-radius: 0.5rem;
+   padding: 1rem;
+   position: relative;
+}
+.taskBar:nth-child(2){
+    
+}
+.taskVideoBox{
+    height: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 2px solid; */
+}
+.taskVideoBox div {
+    border-radius: 1rem;
+    /* box-shadow: 1px -1px 4px rgba(0,0,0,0.5); */
+    border: 1px solid;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+
+}
+.taskVideoBox div video{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    border: 2px solid var(--btnBgcolor);
+}
+
+.taskBar:nth-child(2)  button{
+    background-color: var(--btnBgcolor);
+    color: #fff;
+    height: var(--btnHeight);
+    border: none;
+    cursor: pointer;
+}
+.taskBar:nth-child(2) button:hover{
+    border: 2px solid var(--btnBgcolor);
+    background-color: #fff;
+    color: black;  
+}
+.taskBar:nth-child(3)  button{
+    background-color: var(--btnBgcolor);
+    color: #fff;
+    height: var(--btnHeight);
+    border: none;
+    cursor: pointer;
+}
+.taskBar:nth-child(3) button:hover{
+    border: 2px solid var(--btnBgcolor);
+    background-color: #fff;
+    color: black;  
+}
+.taskNum{
+    position: absolute;
+    top: -1.5rem;
+    left: -0.5rem;
+    background-color: var(--btnBgcolor);
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.2rem;
+    text-align: center;
+    color: #fff;
 }
