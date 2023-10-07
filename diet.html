@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/diet.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img  src="images/fit_logo.png" alt="">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/chat.html">Fit Q&A</a></li>
+                    <li><a href="/blogs.html">Blog</a></li>
+                    <li><a href="/task.html">Tasks</a></li>
+                    <li><a href="/sampark.html">Contact Us</a></li>
+                </ul>
+                <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
+            </div>
+        </nav>
+        <div  id="mySidebar" >
+            <button onclick="sidebar_close()">Close &times;</button>
+            <a href="/">Home</a>
+            <a href="/chat.html">Fit Q&A</a>
+            <a href="/blogs.html">Blog</a>
+            <a href="/task.html">Tasks</a>
+            <a href="/sampark.html">Contact Us</a>
+          </div>
+    </header>
+
+    <main>
+            <section class="dietSearch">
+                 <div>
+                     <input class="dietInput" placeholder="search food items" type="text">
+                     <button >Search</button>
+                 </div>
+            </section>
+            <section class="caloriesChart">
+                <div class="claoriesDiv1">
+                    <h1>Nutritional values</h1>
+                    <table>
+
+                         <tbody  class="dietTable">
+                              
+                               
+                         </tbody>
+                    </table>
+                </div>
+                <div class="caloriesDiv2">
+                     
+                </div>
+            </section>
+            <section class="caloriesGraph">
+                 <div >
+
+                 </div>
+            </section>
+
+    </main>
+
+<!-- ---------------------(footer)----------------------- -->
+    <footer>
+        <div id="footer-content">
+
+        <div class="footerlogo">
+            <img  src="./images/fit_logo.png" alt="logo"> 
+            <p>copyright
+            <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
+             2023 Fit Bucket
+            </p>
+        </div>
+
+        <div>
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="/blogs.html">Blog</a></li>
+                <li><a href="/task.html">Tasks</a></li>
+                <li><a href="/sampark.html">Contact Us</a></li>
+            </ul>
+        </div>
+       
+        </div>
+        
+    </footer>
+    <script src="js/diet.js"></script>
+</body>
+</html>
