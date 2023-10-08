@@ -11,7 +11,7 @@ body {
   }
   .navbar {
     /* background-color: hsl(212, 17%, 85%); */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
     padding: 15px 0;
     /* position: fixed; */
     width: 100%;
@@ -102,7 +102,7 @@ body {
   
   
   #slider_section{
-    background-image:url(https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60); /* Add your background image URL */
+    /* background-image:url('/slideImg1.jpg'); Add your background image URL */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -115,17 +115,17 @@ body {
   }
 
   @keyframes slider {
-     0%{ background-image: url('/images/slideImg1.jpg');background-size: 100% 100% ; }
-     16%{ background-image: url('/images/slideImg1.jpg');background-size: 100% 100% ; }
+     0%{ background-image: url('/slideImg1.jpg');background-size: 100% 100% ; }
+     16%{ background-image: url('/slideImg1.jpg');background-size: 100% 100% ; }
 
 
-     32%{ background-image: url('/images/slideImg2.jpg');background-size: 100% 100% ;}
-     48%{ background-image: url('/images/slideImg2.jpg');background-size: 100% 100% ;}
+     32%{ background-image: url('/slideImg2.jpg');background-size: 100% 100% ;}
+     48%{ background-image: url('/slideImg2.jpg');background-size: 100% 100% ;}
 
-     63%{ background-image: url('/images/slideImg3.jpg'); background-size: 100% 100% ;}
-     79%{ background-image: url('/images/slideImg3.jpg'); background-size: 100% 100% ;}
+     63%{ background-image: url('/slideImg3.jpg'); background-size: 100% 100% ;}
+     79%{ background-image: url('/slideImg3.jpg'); background-size: 100% 100% ;}
 
-     100%{ background-image: url('/images/slideImg1.jpg');background-size: 100% 100% ; }
+     100%{ background-image: url('/slideImg1.jpg');background-size: 100% 100% ; }
 
   }
   

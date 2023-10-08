@@ -16,13 +16,13 @@ main{
     align-items: center;
 }
 .dietSearch div input{
-    width: 20rem;
+    width: 22rem;
     height: 2rem;
     margin: 1rem;
 }
 .dietSearch div button{
     width: 5rem;
-    height: 2.1rem;
+    height: 2.3rem;
     background-color: var(--btnBgcolor);
     color: #fff;
     border: none;
@@ -35,40 +35,42 @@ main{
 }
 .caloriesChart{
     width: 100%;
-    height: 30rem;
-    border: 2px solid red;
+    border: 2px solid rgba(0,0,0,0.2) ;
     display: flex;
     justify-content: center;
-    padding: 1rem;
     box-sizing: border-box;
 }
 .caloriesChart div{
 
-    border: 2px solid ;
-    width: 50%;
+    border: 2px solid rgba(0,0,0,0.4);
+    border-radius: 1rem;
+    width: 60%;
     margin: 1rem;
 
 }
 .claoriesDiv1 h1{
     text-align: center;
+    padding-top: 0.5rem  ;
     color: #fff;
-    height: 3rem;
+    height: 2.4rem;
     background-color: var(--btnBgcolor);
+    
 }
 .claoriesDiv1 table{
    
     width: 100%;
-    /* padding: 0.4rem; */
+    padding: 0.4rem;
     
 
 }
-.claoriesDiv1 table tbody{
-    
-}
-.dietTable tr th{
-    margin: 2rem ;
-}
 
+.dietTable tr {
+    height: 2.2rem;
+    border-radius: 1rem;
+}
+.dietTable{
+    background-color: #94c0dd;
+}
 .caloriesGraph{
     width: 100%;
     height: 20rem;
