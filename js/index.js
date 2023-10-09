@@ -5,6 +5,9 @@ function sidebar_open() {
 function sidebar_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+
+//*************(BMI calc code)**************** */
 let button=document.getElementById('home-btn');
 
 button.addEventListener('click',() =>{
@@ -32,12 +35,21 @@ button.addEventListener('click',() =>{
     const bmi = (weight/((height*height)/10000)).toFixed(2);
 
     if(bmi<18.6){
+      result.style.background="rgb(255, 199, 114)"
       result.innerHTML='Under weight : '+bmi;
+      document.getElementById('bmi-height').value=""
+      document.getElementById('bmi-weight').value=""
     }
     else if(bmi>=18.6 && bmi<24.9){
+      result.style.background="rgb(255, 199, 114)"
       result.innerHTML = 'Normal : '+bmi;
+      document.getElementById('bmi-height').value=""
+      document.getElementById('bmi-weight').value=""
     }else{
+      result.style.background="rgb(255, 199, 114)"
       result.innerHTML='Over weight : '+bmi;
+      document.getElementById('bmi-height').value=""
+      document.getElementById('bmi-weight').value=""
     }
   }else{
     alert('ENCOUNTERED ERROR!!!!!');

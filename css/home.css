@@ -185,14 +185,14 @@ body {
 }
 
 .feature_div {
-  width: 15rem;
+  width: 20rem;
   display: flex;
-  margin: 1rem;
+  margin: 2rem;
   flex-direction: column;
   align-items: center;
   padding: 0.2rem;
   /* border: 2px solid rgba(0,0,0,0.3); */
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
 
@@ -230,15 +230,7 @@ body {
 
 }
 
-@media screen and (max-width:480px) {
-  .nav-links {
-    display: none;
-  }
 
-  #sidebarBtn {
-    display: flex;
-  }
-}
 
 #element {
   color: #78D6C6;
@@ -249,32 +241,57 @@ body {
   color: rgb(221, 86, 86);
 }
 
+.bmiSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .home-wrapper {
   padding: 15px;
-  background-color: #12486B;
+  width: 70%;
   border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow:-1px 1px 5px rgba(0,0,0,0.4);
 }
 
 .bmi-input {
-  border: 0.2rem solid black;
+  margin: 0 2.4rem;
   padding: 0.5rem;
+  width: 20rem;
 }
 
 .bmi-button {
-  color: #12486B;
-  padding: 0.8rem;
+  background-color: #12486B;
+  width: var(--btnWidth);
+  height: 2.5rem;
   border: 0.2rem solid white;
-  background: #F5FCCD;
+  color: #fff;
   display: block;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
 }
 
 .bmi-button:hover {
-  transform: scale(0.3rem);
-  border: 0.1rem solid black;
+  transform: scale(1.04);
+  
 }
 
 #home-output {
-  color: #F5FCCD;
+  
+   padding: 1rem;
+   border-radius: 0.5rem;
+}
+
+
+/* ********************((media queries))********************/
+
+@media screen and (max-width:480px) {
+  .nav-links {
+    display: none;
+  }
+
+  #sidebarBtn {
+    display: flex;
+  }
 }
