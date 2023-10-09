@@ -2,9 +2,10 @@ const exp = require('constants')
 const express= require('express')
 const app=express()
 // const fetch=require('node-fetch')
-
 const path=require('path')
 
+// const User =require('./config.js')
+// app.use(express.json())
 
 app.use(express.static('css'))
 app.use(express.static('assets'))
@@ -38,6 +39,8 @@ app.get('/task1',(req,res)=>{
 app.get('/diet',(req,res)=>{
     res.sendFile(path.join(__dirname+'/views/diet.html'))
 })
+
+
 
 
 // const options={
