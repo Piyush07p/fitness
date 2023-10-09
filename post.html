@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img  src="images/fit_logo.png" alt="">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/chat.html">Fit Q&A</a></li>
+                    <li><a href="/blogs.html">Blog</a></li>
+                    <li><a href="/task.html">Tasks</a></li>
+                    <li><a href="/sampark.html">Contact US</li>
+                </ul>
+                <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
+            </div>
+        </nav>
+        <div  id="mySidebar" >
+            <button onclick="sidebar_close()">Close &times;</button>
+            <a href="/">Home</a>
+            <a href="/chat.html">Fit Q&A</a>
+            <a href="/blogs.html">Blog</a>
+            <a href="/task.html">Tasks</a>
+            <a href="/sampark.html">Contact Us</a>
+          </div>
+    </header>
+
+    <main class="post-main">
+        <section>
+            <div class="banner_img">
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya291dHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="banner-image">
+            </div>
+            <h1 class="blogHeading">Blog 1</h1>
+            <div class="about-author">
+                <address>
+                    <p class="postAuthor">Written by Someone</p>
+                    <p class="postDate">Wednesday Oct 4</p> 
+                </address>
+            </div>
+        </section>
+
+        <hr>
+
+        <article>
+            <p class="post-article">
+                The Article of the goes here
+            </p>
+        </article>
+
+        <hr>
+
+        <section class="commentSection">
+            <div class="commentBox">
+                <p>Leave a Comment</p>
+                    <form class="commentForm">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <textarea placeholder="Type your comment here..." rows="10"></textarea>
+                        <button type="submit">Comment</button>
+                    </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+
+        <div class="footerlogo">
+            <img  src="./images/fit_logo.png" alt="logo"> 
+            <p>copyright
+                <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
+                2023 Fit Bucket
+            </p>
+        </div>
+
+        <div>
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="/blogs.html">Blog</a></li>
+                <li><a href="/task.html">Tasks</a></li>
+                <li><a href="/sampark.html">Contact Us</a></li>
+            </ul>
+        </div>
+       
+        </div>
+        
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/post.js"></script>
+</body>
+</html>
