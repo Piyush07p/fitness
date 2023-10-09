@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <img  src="images/fit_logo.png" alt="">
+                    <img src="images/fit_logo.png" alt="">
                 </div>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
@@ -25,103 +27,119 @@
                 <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
             </div>
         </nav>
-        <div  id="mySidebar" >
+        <div id="mySidebar">
             <button onclick="sidebar_close()">Close &times;</button>
             <a href="/">Home</a>
             <a href="/chat.html">Fit Q&A</a>
             <a href="/blogs.html">Blog</a>
             <a href="/task.html">Tasks</a>
             <a href="/sampark.html">Contact Us</a>
-          </div>
+        </div>
     </header>
 
-        <section id="slider_section">
-            <div class="slider_div">
-                <h1>Welcome to <span style="color: rgb(250, 164, 6);">Fit Bucket</span></h1>
-                <p>Your path to a healthier, stronger you!</p>
-            </div>
-        </section>
-
-        <section class="feature_sec">
-            <h1>Features</h1>
-            <div class="feature_cont">
-                    <div class="feature_div">
-                         <div class="div1">
-                              <img src="images/blogimg.jpg" alt="">
-                         </div>
-                         <div class="div2">
-                                <h3>Read fitness blogs</h3>
-                                <a href="/blogs.html">
-                                    <button>Go</button>
-                                </a>
-                         </div>
-                    </div>
-                    <div class="feature_div">
-                        <div class="div1">
-                             <img src="images/slideImg2.jpg" alt="">
-                        </div>
-                        <div class="div2">
-                               <h3>Complete fitness task</h3>
-                               <a href="/task.html">
-                                <button>Go</button>
-                               </a>
-                        </div>
-                   </div>
-                   <div class="feature_div">
-                    <div class="div1">
-                         <img src="images/dietimgjpg.jpg" alt="">
-                    </div>
-                    <div class="div2">
-                           <h3>Try fitness Diet plan</h3>
-                           <a href="/">
-                            <button>Go</button>
-                           </a>
-                    </div>
-               </div>
-               <div class="feature_div">
-                <div class="div1">
-                     <img src="images/calcImg.jpg" alt="">
-                </div>
-                <div class="div2">
-                       <h3>Calculate BMI</h3>
-                       <a href="/">
-                        <button>Go</button>
-                       </a>
-                </div>
-           </div>
-                   
-
-            </div>
+    <section id="slider_section">
+        <div class="slider_div">
+            <h1>Welcome to <span style="color: rgb(250, 164, 6);">Fit Bucket</span></h1>
+            <p>Your path to a healthier, stronger you!</p>
+        </div>
     </section>
 
+    <section class="feature_sec">
+        <h1>Features</h1>
+        <div class="feature_cont">
+            <div class="feature_div">
+                <div class="div1">
+                    <img src="images/blogimg.jpg" alt="">
+                </div>
+                <div class="div2">
+                    <h3>Read fitness blogs</h3>
+                    <a href="/blogs.html">
+                        <button>Go</button>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_div">
+                <div class="div1">
+                    <img src="images/slideImg2.jpg" alt="">
+                </div>
+                <div class="div2">
+                    <h3>Complete fitness task</h3>
+                    <a href="/task.html">
+                        <button>Go</button>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_div">
+                <div class="div1">
+                    <img src="images/dietimgjpg.jpg" alt="">
+                </div>
+                <div class="div2">
+                    <h3>Try fitness Diet plan</h3>
+                    <a href="/">
+                        <button>Go</button>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_div">
+                <div class="div1">
+                    <img src="images/calcImg.jpg" alt="">
+                </div>
+                <div class="div2">
+                    <h3>Calculate BMI</h3>
+                    <a href="/">
+                        <button>Go</button>
+                    </a>
+                </div>
+            </div>
 
-    
+
+        </div>
+    </section>
+    <main>
+        <div class="home-wrapper">
+            <p>Height in CM:
+                <input class="bmi-input" type="number" id="bmi-height"><br><span class="bmi-span"
+                    id="height_error"></span>
+            </p>
+            <p>Weight in KG:
+                <input class="bmi-input" type="number" id="bmi-weight"><br><span class="bmi-span"
+                    id="weight_error"></span>
+            </p>
+            <button class="bmi-button" id="home-btn">Calculate</button>
+            <p id="home-output"></p>
+        </div>
+    </main>
+    <br>
+    <br>
+
+
     <!----------------- footer_code -------------->
 
     <footer>
         <div id="footer-content">
 
-        <div class="footerlogo">
-            <img  src="./images/fit_logo.png" alt="logo"> 
-            <p>copyright
-            <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
-             2023 Fit Bucket
-            </p>
+            <div class="footerlogo">
+                <img src="./images/fit_logo.png" alt="logo">
+                <p>copyright
+                    <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
+                    2023 Fit Bucket
+                </p>
+            </div>
+
+            <div>
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="/blogs.html">Blog</a></li>
+                    <li><a href="/task.html">Tasks</a></li>
+                    <li><a href="/sampark.html">Contact Us</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div>
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="/blogs.html">Blog</a></li>
-                <li><a href="/task.html">Tasks</a></li>
-                <li><a href="/sampark.html">Contact Us</a></li>
-            </ul>
-        </div>
-       
-        </div>
-        
     </footer>
-    
+
     <script src="./js/index.js"></script>
 </body>
+
 </html>
