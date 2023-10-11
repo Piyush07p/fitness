@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors())
 
+//**************************/
+
 app.set("view engine","ejs")
 
 app.get('/',(req,res)=>{
@@ -56,7 +58,8 @@ connectDb(db_url)
 
 app.use('/askquery',router)
 
+const PORT=5500;
 
-app.listen(5500,()=>{
+app.listen(PORT,()=>{
     console.log("server running")
 })

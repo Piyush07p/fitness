@@ -1,4 +1,7 @@
 const dataModel=require('../models/dbmodel.js')
+const replyModel=require('../models/replymodel.js')
+
+
 
 
 class ControllerClass{
@@ -59,6 +62,32 @@ class ControllerClass{
         }catch(err){
             console.log(err)
         }
+    }
+
+    static replyData=async(req,res)=>{
+        try{
+            console.log(req.body.replies);
+            const data=new replyModel({
+                reply:req.body.replies
+            })
+            await data.save()
+            res.redirect("/askquery")
+          }catch(err){
+            console.log(err);
+          }
+    }
+
+    static getReply=async (req,res)=>{
+        try{
+            const result=await replyModel.find()
+            console.log(result)
+            res.render("reply",{replyData:result})
+            // res.redirect("/askquery")
+            
+        }catch(err){
+            console.log(err)
+        }
+     
     }
 }
 

@@ -9,6 +9,14 @@ router.post('/update/:id',ControllerClass.updateQuery)
 router.post('/delete/:id',ControllerClass.delQuery)
 
 
+// for reply functionality
+
+router.get('/reply',ControllerClass.getReply)
+router.post('/reply/:id',ControllerClass.replyData)
+
+
+
+
 
 
 

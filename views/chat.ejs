@@ -38,11 +38,7 @@
     </header>
     
     <section class="chat_sec">
-        <div class="replyPopup">
-            <p class="popPara">0</p>
-            <textarea placeholder="enter something.." name=""></textarea><br>
-            <button class="popBtn" onclick="removePop()">add</button>
-        </div>
+       
         <div>
             <h1>Post your any fitness query here..</h1>
         </div>
@@ -53,7 +49,7 @@
             </form>
         </div>
         <div class="chat_box">
-            <% queryData.forEach((elem)=>{ %>
+            <% queryData.forEach((elem,ind)=>{ %>
                 <div class="query_box">
                     <div>
                         <p><%= elem.askQuery %></p>
@@ -62,12 +58,31 @@
                         <form style="display: inline;" action="/askquery/edit/<%=elem._id%>" method="get">
                             <button>edit</button>
                         </form>
-                        <button>reply</button>
+                        <button onclick="replyfunc()">reply</button>
                         <form style="display: inline;" action="/askquery/delete/<%=elem._id%>" method="post">
                             <button>delete</button>
                         </form>
                        
                     </div>
+
+                    <div class="replyPopup">
+                        <form action="/askquery/reply/<%=elem._id%>" method="post">
+                                <p class="popPara">0</p>
+                                <textarea placeholder="enter something.." name="replies"></textarea><br>
+                                <button class="popBtn">add</button>
+                        </form>
+                    </div>
+                
+                    <section class="replySection">
+                        <span>replies</span>
+                        <a href="/askquery/reply"> <button class="replyBtn" onclick="showReply(<%=ind%>)" style="display: inline;">see</button></a>
+                        <div class="replyUL">
+                        <ul>
+                            
+
+                        </ul>
+                    </div>
+                    </section>
                 </div>
                
            <% }) %>
@@ -75,7 +90,9 @@
         </div>
 
     </section>
-
+  <div>
+   
+  </div>
 
     
     <footer>
@@ -103,6 +120,6 @@
     </footer>
     <script src="./home.js"></script>
 </body>
-<!-- <script src="./chat.js"></script> -->
+<script src="./chat.js"></script>
 
 </html>
