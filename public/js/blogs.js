@@ -5,6 +5,6 @@ function loadMore() {
 }
 
 function openPostPage(n){
-    window.open('post.html')
+    window.open('posts')
     localStorage.setItem("articleIndex",n)
 }

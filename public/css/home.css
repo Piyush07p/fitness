@@ -121,38 +121,36 @@ body {
 
 @keyframes slider {
   0% {
-    background-image: url('/images/slideImg1.jpg');
+    background-image: url('/assets/slideImg1.jpg');
     background-size: 100% 100%;
   }
 
   16% {
-    background-image: url('/images/slideImg1.jpg');
+    background-image: url('/assets/slideImg1.jpg');
     background-size: 100% 100%;
   }
-
-
   32% {
-    background-image: url('/images/slideImg2.jpg');
+    background-image: url('/assets/slideImg2.jpg');
     background-size: 100% 100%;
   }
 
   48% {
-    background-image: url('/images/slideImg2.jpg');
+    background-image: url('/assets/slideImg2.jpg');
     background-size: 100% 100%;
   }
 
   63% {
-    background-image: url('/images/slideImg3.jpg');
+    background-image: url('/assets/slideImg3.jpg');
     background-size: 100% 100%;
   }
 
   79% {
-    background-image: url('/images/slideImg3.jpg');
+    background-image: url('/assets/slideImg3.jpg');
     background-size: 100% 100%;
   }
 
   100% {
-    background-image: url('/images/slideImg1.jpg');
+    background-image: url('/assets/slideImg1.jpg');
     background-size: 100% 100%;
   }
 

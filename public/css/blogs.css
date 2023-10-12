@@ -77,14 +77,20 @@ body {
 }
 
 .loadMoreBtn {
-    border: 1px solid #ccc;;
-    padding: 1rem 1.5rem;
+    color: #fff;
+    width: var(--btnWidth);
+    height: var(--btnHeight);
+    background-color: var(--btnBgcolor);
+    border: none;
     text-align: center;
     cursor: pointer;
 }
 
 .loadMoreBtn:hover {
-    border: 1px solid #000;
+    border: 2px solid var(--btnBgcolor);
+    background-color: #fff;
+    color: black;
+    transform: scale(1.1);
 }
 
 
