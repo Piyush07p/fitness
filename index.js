@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express= require('express')
 const path=require('path')
 const cors=require('cors')
@@ -57,13 +58,13 @@ app.get('/posts',(req,res)=>{
 
 
 
-const db_url="mongodb+srv://canban27:motgSZGPhlTTX07e@cluster0.k7d0kt3.mongodb.net/?retryWrites=true&w=majority"
+const db_url=process.env.MONGO_URL
 connectDb(db_url)
 
 app.use('/askquery',router)
 
-const PORT=5500;
 
-app.listen(PORT,()=>{
-    console.log("server running")
+
+app.listen(process.env.PORT,()=>{
+    console.log(`server running at port ${process.env.PORT}` )
 })
