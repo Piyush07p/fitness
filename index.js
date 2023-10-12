@@ -7,9 +7,8 @@ const app=express();
 
 //all middleware used
 
-app.use(express.static('css'))
-app.use(express.static('assets'))
-app.use(express.static('js'))
+app.use(express.static(path.join(__dirname,'public')))
+
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors())
@@ -53,7 +52,7 @@ app.get('/diet',(req,res)=>{
 })
 
 
-const db_url="mongodb://127.0.0.1:27017"
+const db_url="mongodb+srv://canban27:motgSZGPhlTTX07e@cluster0.k7d0kt3.mongodb.net/?retryWrites=true&w=majority"
 connectDb(db_url)
 
 app.use('/askquery',router)
