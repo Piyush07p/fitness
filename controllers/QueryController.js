@@ -66,8 +66,8 @@ class ControllerClass{
 
     static replyData=async(req,res)=>{
         try{
-            console.log(req.body.replies);
             const data=new replyModel({
+                queryId:req.body.qid,
                 reply:req.body.replies
             })
             await data.save()
@@ -79,16 +79,25 @@ class ControllerClass{
 
     static getReply=async (req,res)=>{
         try{
-            const result=await replyModel.find()
+            const result=await replyModel.find({queryId:req.params.id})
             console.log(result)
             res.render("reply",{replyData:result})
-            // res.redirect("/askquery")
             
         }catch(err){
             console.log(err)
         }
      
     }
+
+    static delReply= async(req,res)=>{
+        try{
+            const result=await replyModel.findByIdAndDelete(req.params.id)
+            res.redirect('/askquery')
+        }catch(err){
+            console.log(err)
+        }
+    }
+
 }
 
 module.exports=ControllerClass

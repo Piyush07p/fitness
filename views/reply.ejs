@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/reply.css">
 </head>
 <body>
-    <div>
-        <ul>
-            <%  replyData.forEach((elem)=>{ %>
+    <section class="replyPageSec">
+        <h1>Replies</h1>
+       <div>
+        <%  replyData.forEach((elem)=>{ %>
+            <ul>
+            
+                <h3>User_name</h3>
                 <li><%=elem.reply%></li>
-            <% }) %>
-           
-        </ul>
-    </div>
+                <form action="/askquery/reply/delete/<%=elem._id%>" method="post">
+                    <button style="display: inline;">delete</button>
+                </form>
+            
+            </ul>
+            
+        <% }) %>
+       </div>
+    </section>
 </body>
 </html>

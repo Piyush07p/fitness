@@ -11,9 +11,9 @@ router.post('/delete/:id',ControllerClass.delQuery)
 
 // for reply functionality
 
-router.get('/reply',ControllerClass.getReply)
+router.get('/reply/:id',ControllerClass.getReply)
 router.post('/reply/:id',ControllerClass.replyData)
-
+router.post('/reply/delete/:id',ControllerClass.delReply)
 
 
 

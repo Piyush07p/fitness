@@ -61,29 +61,36 @@
                         <form style="display: inline;" action="/askquery/edit/<%=elem._id%>" method="get">
                             <button>edit</button>
                         </form>
-                        <button onclick="replyfunc()">reply</button>
+                        <button onclick="replyfunc(<%=ind%>)">reply</button>
                         <form style="display: inline;" action="/askquery/delete/<%=elem._id%>" method="post">
                             <button>delete</button>
                         </form>
                        
                     </div>
 
-                    <div class="replyPopup">
-                        <form action="/askquery/reply/<%=elem._id%>" method="post">
-                                <p class="popPara">0</p>
-                                <textarea placeholder="enter something.." name="replies"></textarea><br>
-                                <button class="popBtn">add</button>
-                        </form>
-                    </div>
-                
-                    <section class="replySection">
-                        <span>replies</span>
-                        <a href="/askquery/reply"> <button class="replyBtn" onclick="showReply(<%=ind%>)" style="display: inline;">see</button></a>
-                        <div class="replyUL">
-                        <ul>
+                <!-- *************************((reply-popup))************************** -->
 
-                        </ul>
-                    
+                    <section>
+                        <div class="replyPopup">
+                        
+                            <form action="/askquery/reply/<%=elem._id%>" method="post">
+                                    <p class="popPara">add reply</p>
+                                    <input style="display: none;" type="text" name="qid" value="<%=elem._id%>" id="">
+                                    <textarea placeholder="enter something.." name="replies"></textarea><br>
+                                    <button class="popBtn">add</button>
+                            </form>
+                           <button onclick="removePop(<%=ind%>)">cancel</button>
+                           
+                        </div>
+                    </section>
+
+                <!-- *************************((end))******************************** -->
+
+                    <section class="replySection">
+                       <form action="/askquery/reply/<%=elem._id%>" method="get">
+                        <!-- <input name="inpId" value="<%=elem._id%>" type="text"> -->
+                        <button  class="replyBtn"  style="display: inline;">see replies</button>
+                       </form>
                     </section>
                 </div>
                

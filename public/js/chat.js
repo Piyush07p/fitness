@@ -81,11 +81,11 @@ function showReplyUL(flag,ind){
     }
     if(flag){
         document.querySelectorAll('.replyUL')[ind].style.display="unset"
-        seeHide[ind].value="hide"
+        seeHide[ind].value="hide replies"
     }
     if(!flag){
         document.querySelectorAll('.replyUL')[ind].style.display="none"
-        seeHide[ind].value="see"
+        seeHide[ind].value="see replies"
     }
    
     
@@ -114,55 +114,36 @@ function showReplyUL(flag,ind){
 // function for showing the replyPopup
 
 function replyfunc(ind){
-    let popPara=document.querySelector('.popPara')
-    popPara.innerHTML=ind
-    let replyPopup=document.querySelector('.replyPopup')
+
+    // let popPara=document.querySelector('.popPara')
+    let replyPopup=document.querySelectorAll('.replyPopup')[ind]
     replyPopup.style.top="10rem";
 
-    let chatSecDiv=document.querySelector('.chat_inp')
-    chatSecDiv.classList.toggle('active')
-
+    // let chatSecDiv=document.querySelector('.chat_inp')
+    // chatSecDiv.classList.toggle('active')
     
 }
 
 
 
-function removePop(){
-    let replyPopup=document.querySelector('.replyPopup')
+function removePop(ind){
+    let replyPopup=document.querySelectorAll('.replyPopup')[ind]
     
-    let replyTarea=document.querySelector('.replyPopup textarea')
-    let popPara=document.querySelector('.popPara')
-    
-    let replyindex=popPara.innerHTML
+    // let replyTarea=document.querySelector('.replyPopup textarea')
 
     
-    let chatSecDiv=document.querySelector('.chat_inp')
-    chatSecDiv.classList.toggle('active')
+    // let chatSecDiv=document.querySelector('.chat_inp')
+    // chatSecDiv.classList.toggle('active')
 
-    replyTarea.value=""
-    replyPopup.style.top="-12rem";
-    showReply(replyindex);
+    // replyTarea.value=""
+    replyPopup.style.top="-20rem";
+
 
     
 }
 
 // function for showing the reply
 
-var flag=true;
-function showReply(e){
-
-    let replyUL=document.querySelectorAll('.replyUL')[e]
-    if(flag){
-        replyUL.style.display="unset"
-        document.querySelectorAll('.replyBtn')[e].innerHTML="hide"
-    }
-    else{
-        replyUL.style.display="none"
-        document.querySelectorAll('.replyBtn')[e].innerHTML="see"
-    }
-   
-    flag=!flag
-}
 
 
 
