@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/adminlogin.css">
+</head>
+<body>
+    <section class="adminSec">
+        <h1>Admin Login</h1>
+        <%
+          if(typeof message !=="undefined"){
+        %>
+        <h3><%= message %></h3>
+       <%
+          }
+        %>
+        <form action="/admin" method="post">
+            <label for="">email</label>
+            <br>
+            <input required placeholder="enter email" type="text" name="email" id="">
+            <br><br>
+            <label for="">password</label>
+            <br>
+            <input required placeholder="enter password" type="password" name="password" id="">
+            <br>
+            <br>
+            <button>Login</button>
+        </form>
+
+    </section>
+    
+
+</body>
+</html>

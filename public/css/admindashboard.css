@@ -1,0 +1,35 @@
+
+.adminDash_sec{
+    width: 100%;
+    padding:2rem 0;
+    display: flex;
+    box-sizing: border-box;
+}
+.assideDiv{
+    width: 20%;
+    border: 2px solid;
+}
+.dataDiv{
+    width: 80%;
+    padding: 1rem 0;
+
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.userlistDiv{
+    border: 2px solid red;
+    width: 85% ;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.userlistDiv div{
+    width: 18rem;
+    height: 12rem;
+    margin: 1rem;
+    border: 2px solid rgba(0,0,0,0.3);
+}

@@ -3,8 +3,17 @@ const express= require('express')
 const path=require('path')
 const cors=require('cors')
 const {connectDb}=require('./db/connectdb')
+
+
+// getting all routes used in our project
 const router=require('./routes/Queryroute.js')
+const authrouter=require('./routes/userAuth.js')
+const adminrouter=require('./routes/adminRoute.js')
+
+
+
 const app=express();
+
 
 //all middleware used
 
@@ -57,13 +66,24 @@ app.get('/posts',(req,res)=>{
 })
 
 
+// routes for login signup
+app.get('/signup',(req,res)=>{
+    res.render('signup')
+})
+
+app.get('/login',(req,res)=>{
+    res.render('login')
+})
+
+//routes for admin
+
+
+app.use('/askquery',router)
+app.use('/userAuth',authrouter)
+app.use('/admin',adminrouter)
 
 const db_url=process.env.MONGO_URL
 connectDb(db_url)
-
-app.use('/askquery',router)
-
-
 
 app.listen(process.env.PORT,()=>{
     console.log(`server running at port ${process.env.PORT}` )

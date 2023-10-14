@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+     <section class="login_sec">
+        <h1>Login page</h1>
+         <form action="/userAuth/login" method="post">
+            <label for="">email</label>
+            <input name="email" placeholder="enter your email" type="text">
+            <br><br>
+            <label for="">password</label>
+             <input name="password" placeholder="enter your password" type="password">
+             <br><br>
+             <button>Login</button>
+         </form>
+         <br><br>
+         <div>
+            <span>Not have an account ?</span>
+             <a href="/signup">Signup</a>
+        </div>
+     </section>
+</body>
+</html>

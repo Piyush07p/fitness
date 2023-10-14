@@ -1,0 +1,31 @@
+@import 'home.css';
+
+
+.login_sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_sec form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border:1px solid rgba(0,0,0,0.3);
+    height: 16rem;
+    padding: 1rem;
+}
+
+.login_sec form input{
+    width: 80%;
+    height: 2rem;
+}
+
+.login_sec form button{
+    width: var(--btnWidth);
+    background-color: var(--btnBgcolor);
+    color: #fff;
+    height: 2rem;
+    cursor: pointer;
+    border: none;
+}
