@@ -5,7 +5,8 @@ async function handleUserSignup(req,res){
     await userModel.create({
         name:name,
         email:email,
-        password:password
+        password:password,
+        is_admin:0
     })
 
      res.redirect("/")

@@ -11,7 +11,8 @@ async function adminLogin(req,res){
 
 async function adminDashboard(req,res){
     try{
-        res.render("admindashboard");
+        const result=await userModel.find({is_admin:0})
+        res.render("admindashboard",{userData:result});
     }catch(err){
         console.log(err)
     }
@@ -38,8 +39,18 @@ async function handleAdminLogin(req,res){
     }
 }
 
+async function deleteUser(req,res){
+    try{
+        const result=await userModel.findByIdAndDelete(req.params.id)
+        res.redirect('/admin/dashboard')
+    }catch(err){
+        console.log(err)
+    }
+}
+
 module.exports={
     adminLogin,
     adminDashboard,
-    handleAdminLogin
+    handleAdminLogin,
+    deleteUser
 }

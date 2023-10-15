@@ -1,4 +1,4 @@
-
+@import url('home.css');
 .adminDash_sec{
     width: 100%;
     padding:2rem 0;
@@ -20,16 +20,23 @@
 
 }
 .userlistDiv{
-    border: 2px solid red;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     width: 85% ;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.userlistDiv div{
-    width: 18rem;
-    height: 12rem;
+.userDetailDiv{
+    width: 16rem;
+    height: 10rem;
     margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
     border: 2px solid rgba(0,0,0,0.3);
+}
+.userDetailDiv button{
+   width: var(--btnWidth);
+   height: var(--btnHeight);
+   cursor: pointer;
 }

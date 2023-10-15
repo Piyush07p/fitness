@@ -7,18 +7,26 @@
     <link rel="stylesheet" href="/css/admindashboard.css">
 </head>
 <body>
+    <h1 style="text-align: center;">Welcome to fitbucket admin dashboard</h1>
     <section class="adminDash_sec">
+        
          <div class="assideDiv">
 
          </div>
          <div class="dataDiv">
-            <h1>Welcome to admin dashboard</h1>
+           
+            <h3>Here is the list of registered users on fitbucket</h3>
              <div class="userlistDiv">
-                <div>user 1</div>
-                <div>user 1</div>
-                <div>user 1</div>
-                <div>user 1</div>
-                <div>user 1</div>
+                <% userData.forEach((elem,ind)=>{ %>
+                    <div class="userDetailDiv">
+                        <h3>User <%= ind+1%></h3>
+                        <hr>
+                       <h4> <%=elem.name%></h4>
+                       <form action="/admin/dashboard/delete/<%=elem._id%>" method="post">
+                         <button>remove</button>
+                       </form>
+                    </div>
+                <%  })%>
              </div>
          </div>
 
