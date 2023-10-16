@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="/css/admindashboard.css">
 </head>
 <body>
-    <h1 style="text-align: center;">Welcome to fitbucket admin dashboard</h1>
+    <h1 style="text-align: center;">Fitbucket admin dashboard</h1>
     <section class="adminDash_sec">
         
          <div class="assideDiv">
-
+                <h3>General</h3>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Setting</li>
+                </ul>
          </div>
          <div class="dataDiv">
            
@@ -22,6 +26,7 @@
                         <h3>User <%= ind+1%></h3>
                         <hr>
                        <h4> <%=elem.name%></h4>
+                       <h4> <%=elem.email%></h4>
                        <form action="/admin/dashboard/delete/<%=elem._id%>" method="post">
                          <button>remove</button>
                        </form>

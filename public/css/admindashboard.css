@@ -3,17 +3,27 @@
     width: 100%;
     padding:2rem 0;
     display: flex;
+    background-color:#d3d3d3;
     box-sizing: border-box;
 }
 .assideDiv{
     width: 20%;
-    border: 2px solid;
+    box-sizing: border-box;
+    padding: 1rem;
+    /* border: 2px solid; */
+    background-color: #fff;
+    margin-right: 0.5rem;
+}
+.assideDiv ul li{
+    margin: 1rem 0;
+    cursor: pointer;
+
 }
 .dataDiv{
     width: 80%;
     padding: 1rem 0;
 
-    border: 2px solid;
+    /* border: 2px solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,22 +31,31 @@
 }
 .userlistDiv{
     box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    width: 85% ;
+    width: 91% ;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #fff;
 }
 .userDetailDiv{
     width: 16rem;
-    height: 10rem;
+    height: 12rem;
     margin: 1rem;
     border-radius: 1rem;
+    color: #fff;
     padding: 1rem;
     border: 2px solid rgba(0,0,0,0.3);
+    background-color: #272727;
 }
 .userDetailDiv button{
    width: var(--btnWidth);
    height: var(--btnHeight);
    cursor: pointer;
+
+}
+.userDetailDiv button:hover{
+    background-color: var(--btnBgcolor);
+    color: #fff;
+    border: none;
 }

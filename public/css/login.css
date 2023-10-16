@@ -7,6 +7,13 @@
     flex-direction: column;
     align-items: center;
 }
+.login_sec h3{
+    background-color: rgb(255, 218, 149);
+    padding: 1rem;
+    width: 50%;
+    border-radius: 0.5rem;
+
+}
 .login_sec form{
     display: flex;
     flex-direction: column;

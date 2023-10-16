@@ -67,11 +67,11 @@ app.get('/posts',(req,res)=>{
 
 
 // routes for login signup
-app.get('/signup',(req,res)=>{
+app.get('/userAuth/signup',(req,res)=>{
     res.render('signup')
 })
 
-app.get('/login',(req,res)=>{
+app.get('/userAuth/login',(req,res)=>{
     res.render('login')
 })
 
