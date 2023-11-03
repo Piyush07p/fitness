@@ -33,9 +33,9 @@
     box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     width: 91% ;
     padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
     background-color: #fff;
 }
 .userDetailDiv{

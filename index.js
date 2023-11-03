@@ -4,6 +4,14 @@ const path=require('path')
 const cors=require('cors')
 const {connectDb}=require('./db/connectdb')
 
+const app=express();
+const config=require('./config/config.js')
+
+const session=require('express-session');
+app.use(session({secret:config.secret_key}))
+
+const auth=require('./middleware/auth.js')
+
 
 // getting all routes used in our project
 const router=require('./routes/Queryroute.js')
@@ -12,7 +20,6 @@ const adminrouter=require('./routes/adminRoute.js')
 
 
 
-const app=express();
 
 
 //all middleware used
@@ -28,7 +35,7 @@ app.use(cors())
 app.set("view engine","ejs")
 
 app.get('/',(req,res)=>{
-    res.render('index')
+    res.render('index',{name:req.session.message})
 })
 
 app.get('/chat',(req,res)=>{
@@ -38,7 +45,7 @@ app.get('/chat',(req,res)=>{
 
 app.get('/blogs',(req,res)=>{
     // res.sendFile(path.join(__dirname,'views','blogs.ejs'))
-    res.render('blogs')
+    res.render('blogs',{message:req.session.message})
 })
 
 app.get('/task',(req,res)=>{
@@ -67,13 +74,13 @@ app.get('/posts',(req,res)=>{
 
 
 // routes for login signup
-app.get('/userAuth/signup',(req,res)=>{
-    res.render('signup')
-})
+// app.get('/userAuth/signup',(req,res)=>{
+//     res.render('signup')
+// })
 
-app.get('/userAuth/login',(req,res)=>{
-    res.render('login')
-})
+// app.get('/userAuth/login',(req,res)=>{
+//     res.render('login')
+// })
 
 //routes for admin
 

@@ -23,7 +23,6 @@ async function handleAdminLogin(req,res){
         const email=req.body.email;
         const passw=req.body.password;
         const adminData=await userModel.findOne({email:email,password:passw});
-        console.log(adminData)
         if(adminData){
             if(adminData.is_admin==1){
                 res.redirect('/admin/dashboard');

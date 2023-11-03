@@ -25,7 +25,13 @@
                     <li><a href="/task">Tasks</a></li>
                     <li><a href="/sampark">Contact Us</a></li>
                 </ul>
-                <a href="/userAuth/signup"><button class="signupBtn">signup</button></a>
+                <div>
+                    <%if(msg){%>
+                        <a href="/userAuth/logout" ><button class="signupBtn">logout</button></a>
+                    <%}else{%>
+                    <a href="/userAuth/login"><button class="signupBtn">login</button></a>
+                    <%}%>
+                </div>
                 <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
         </nav>
         <div  id="mySidebar" >
@@ -40,17 +46,19 @@
     
     <section class="chat_sec">
        
-        <div>
-            <h1>Post your any fitness query here..</h1>
+        <div style="height: 5rem;">
+            <h2>Welcome <span style="color: red;"><%=msg%></span>, post your any fitness query here..</h2>
+
         </div>
         <div class="chat_inp">
             <form class="chat_inp" method="post">
-                <input name="name" required placeholder="enter your name.."><br>
+                <input name="name" value="<%=msg%>" required placeholder="enter your name.."><br>
                 <textarea name="textarea" placeholder="enter your query.."></textarea><br>
                 <button class="createBtn">post</button>
             </form>
         </div>
         <div class="chat_box">
+            <h1 style="display: block">Queries</h1>
             <% queryData.forEach((elem,ind)=>{ %>
                 <div class="query_box">
                     <div>
@@ -60,11 +68,15 @@
                     </div>
                     <div>
                         <form style="display: inline;" action="/askquery/edit/<%=elem._id%>" method="get">
-                            <button>edit</button>
+                            <% if(elem.name==msg){%>
+                                <button>edit</button>
+                            <%}%>
                         </form>
                         <button onclick="replyfunc(<%=ind%>)">reply</button>
                         <form style="display: inline;" action="/askquery/delete/<%=elem._id%>" method="post">
+                           <% if(elem.name==msg){%>
                             <button>delete</button>
+                            <%}%>
                         </form>
                        
                     </div>
@@ -77,6 +89,7 @@
                             <form action="/askquery/reply/<%=elem._id%>" method="post">
                                     <p class="popPara">add reply</p>
                                     <input style="display: none;" type="text" name="qid" value="<%=elem._id%>" id="">
+                                    <input style="width:90%;" type="text" name="name" value="<%=msg%>" id="">
                                     <textarea placeholder="enter something.." name="replies"></textarea><br>
                                     <button class="popBtn">add</button>
                             </form>

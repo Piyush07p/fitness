@@ -1,7 +1,7 @@
 const express =require('express')
 const router=express.Router();
 const ControllerClass=require('../controllers/QueryController')
-
+const auth=require('../middleware/auth.js')
 router.get('/',ControllerClass.getQuery)
 router.post('/',ControllerClass.createQuery)
 router.get('/edit/:id',ControllerClass.editQuery)

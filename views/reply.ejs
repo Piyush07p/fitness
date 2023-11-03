@@ -11,18 +11,23 @@
         <h1>Replies</h1>
        <div>
         <%  replyData.forEach((elem)=>{ %>
+        
             <ul>
             
-                <h3>User_name</h3>
+                <h3><%=elem.userName%></h3>
                 <li><%=elem.reply%></li>
                 <form action="/askquery/reply/delete/<%=elem._id%>" method="post">
+                   <%if(elem.userName==uname){%>
                     <button style="display: inline;">delete</button>
+                    <%}%>
                 </form>
             
             </ul>
-            
+
+             
         <% }) %>
        </div>
+       
     </section>
 </body>
 </html>

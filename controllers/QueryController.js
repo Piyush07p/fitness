@@ -1,3 +1,4 @@
+const session = require('express-session');
 const dataModel=require('../models/dbmodel.js')
 const replyModel=require('../models/replymodel.js')
 
@@ -25,7 +26,8 @@ class ControllerClass{
     static getQuery=async (req,res)=>{
         try{
             const result=await dataModel.find()
-            res.render("chat",{queryData:result})
+            console.log(req.session.message)
+            res.render("chat",{queryData:result,msg:req.session.message})
         }catch(err){
             console.log(err)
         }
@@ -68,6 +70,7 @@ class ControllerClass{
         try{
             const data=new replyModel({
                 queryId:req.body.qid,
+                userName:req.body.name,
                 reply:req.body.replies
             })
             await data.save()
@@ -81,7 +84,11 @@ class ControllerClass{
         try{
             const result=await replyModel.find({queryId:req.params.id})
             console.log(result)
-            res.render("reply",{replyData:result})
+            if(result){
+                res.render("reply",{replyData:result,uname:req.session.message})
+            }else{
+                res.render("reply",{message:"no replies present",uname:req.session.message})
+            }
             
         }catch(err){
             console.log(err)

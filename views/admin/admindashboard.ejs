@@ -14,6 +14,7 @@
                 <h3>General</h3>
                 <ul>
                     <li>Dashboard</li>
+                    <li>Messages</li>
                     <li>Setting</li>
                 </ul>
          </div>
@@ -21,6 +22,7 @@
            
             <h3>Here is the list of registered users on fitbucket</h3>
              <div class="userlistDiv">
+                <% if(1){%>
                 <% userData.forEach((elem,ind)=>{ %>
                     <div class="userDetailDiv">
                         <h3>User <%= ind+1%></h3>
@@ -32,6 +34,8 @@
                        </form>
                     </div>
                 <%  })%>
+
+                <%}%>
              </div>
          </div>
 
