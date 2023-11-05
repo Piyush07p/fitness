@@ -11,10 +11,9 @@
         <h1>Replies</h1>
        <div>
         <%  replyData.forEach((elem)=>{ %>
-        
             <ul>
-            
-                <h3><%=elem.userName%></h3>
+                
+                <h3><img  style="width: 2rem; border-radius: 50%;" src="/assets/profile_logo.jpeg" />  <%=elem.userName%></h3>
                 <li><%=elem.reply%></li>
                 <form action="/askquery/reply/delete/<%=elem._id%>" method="post">
                    <%if(elem.userName==uname){%>
@@ -23,8 +22,6 @@
                 </form>
             
             </ul>
-
-             
         <% }) %>
        </div>
        

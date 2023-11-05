@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
     <link rel="stylesheet" href="/css/admindashboard.css">
 </head>
 <body>
     <h1 style="text-align: center;">Fitbucket admin dashboard</h1>
+    <div style="width: 100%; display: flex; justify-content: space-between; padding: 0 3rem;box-sizing: border-box;">
+        <p style="color: red;"><%=adminName%></p>
+        <a href="/admin/logout"><button  style="width: 4rem; height: 2rem; cursor: pointer; ">Logout</button></a>
+    </div>
     <section class="adminDash_sec">
-        
          <div class="assideDiv">
                 <h3>General</h3>
                 <ul>

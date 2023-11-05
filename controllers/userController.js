@@ -33,7 +33,7 @@ async function handleUserLogin(req,res){
         console.log(req.session);
         req.session.message=userData.name
         console.log(req.session.message);
-        res.redirect('/');
+        res.redirect('/askquery');
     }
 }
 

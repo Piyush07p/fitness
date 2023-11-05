@@ -3,7 +3,11 @@ const userModel=require('../models/userModel')
 
 async function adminLogin(req,res){
     try{
-        res.render("adminlogin");
+       if(req.session.admin_id){
+          res.redirect('/admin/dashboard')
+       }else{
+         res.render("adminlogin");
+       }
     }catch(err){
         console.log(err)
     }
@@ -12,7 +16,12 @@ async function adminLogin(req,res){
 async function adminDashboard(req,res){
     try{
         const result=await userModel.find({is_admin:0})
-        res.render("admindashboard",{userData:result});
+        const adminData=await userModel.find({is_admin:1})
+        if(req.session.admin_id){
+            res.render("admindashboard",{userData:result,adminName:"You are logged in as admin"});
+        }else{
+            res.redirect('/admin')
+        }
     }catch(err){
         console.log(err)
     }
@@ -25,6 +34,9 @@ async function handleAdminLogin(req,res){
         const adminData=await userModel.findOne({email:email,password:passw});
         if(adminData){
             if(adminData.is_admin==1){
+                req.session.admin_id=adminData._id;
+                console.log(req.session.admin_id)
+                console.log("admin login success")
                 res.redirect('/admin/dashboard');
             }else{
                 res.render('adminlogin',{message:"not an admin"})

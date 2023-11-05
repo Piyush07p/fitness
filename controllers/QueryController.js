@@ -15,6 +15,7 @@ class ControllerClass{
             askQuery:req.body.textarea
         })
         await data.save()
+        console.log("query added successfully")
         res.redirect("/askquery")
       }catch(err){
         console.log(err);
