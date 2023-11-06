@@ -14,10 +14,13 @@ const auth=require('./middleware/auth.js')
 
 
 // getting all routes used in our project
+
 const router=require('./routes/Queryroute.js')
 const authrouter=require('./routes/userAuth.js')
 const adminrouter=require('./routes/adminRoute.js')
+const controuter=require('./routes/contactRoute.js')
 
+//*****************( )*********************
 
 
 
@@ -53,10 +56,6 @@ app.get('/task',(req,res)=>{
     res.render('task')
 })
 
-app.get('/sampark',(req,res)=>{
-    // res.sendFile(path.join(__dirname,'views','sampark.ejs'))
-    res.render('sampark')
-})
 
 app.get('/task1',(req,res)=>{
     // res.sendFile(path.join(__dirname,'views','task1.ejs'))
@@ -82,13 +81,15 @@ app.get('/posts',(req,res)=>{
 //     res.render('login')
 // })
 
-//routes for admin
 
 
+//all rourtes
 app.use('/askquery',router)
 app.use('/userAuth',authrouter)
 app.use('/admin',adminrouter)
+app.use('/contact',controuter)
 
+//database configuration
 const db_url=process.env.MONGO_URL
 connectDb(db_url)
 

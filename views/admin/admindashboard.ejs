@@ -23,8 +23,11 @@
                 </ul>
          </div>
          <div class="dataDiv">
-           
-            <h3>Here is the list of registered users on fitbucket</h3>
+            <div class="total_register_div">
+                <h3>Total registered users:</h3>
+                <h3><%=userData.length%></h3>
+            </div>
+            <br>
              <div class="userlistDiv">
                 <% if(1){%>
                 <% userData.forEach((elem,ind)=>{ %>

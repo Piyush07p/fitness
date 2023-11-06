@@ -1,5 +1,6 @@
 
 const userModel=require('../models/userModel')
+const bcrypt=require('bcryptjs')
 
 async function adminLogin(req,res){
     try{
@@ -30,9 +31,10 @@ async function adminDashboard(req,res){
 async function handleAdminLogin(req,res){
     try {
         const email=req.body.email;
-        const passw=req.body.password;
-        const adminData=await userModel.findOne({email:email,password:passw});
-        if(adminData){
+        const password=req.body.password;
+        const adminData=await userModel.findOne({email:email});
+        const isadminMatch=await bcrypt.compare(password,adminData.password);
+        if(isadminMatch){
             if(adminData.is_admin==1){
                 req.session.admin_id=adminData._id;
                 console.log(req.session.admin_id)
