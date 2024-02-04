@@ -63,9 +63,10 @@
             <% queryData.forEach((elem,ind)=>{ %>
                 <div class="query_box">
                     <div>
-                        <h3><img style="width: 2rem; border-radius: 50%;" src="../assets/profile_logo.jpeg"/> <%= elem.name %></h3>
+                        <h3><img style="width: 2rem; border-radius: 50%;" src="../assets/profile_logo.jpeg"/> <%= elem.name %> <span><%= elem.currentTime %></span></h3>
+                        
                         <br>
-                        <p><%= elem.askQuery %></p>
+                        <p><%= elem.askQuery %> </p>
                     </div>
                     <div>
                         <form style="display: inline;" action="/askquery/edit/<%=elem._id%>" method="get">

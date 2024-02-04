@@ -31,9 +31,9 @@ body{
   transition: all 0.3s ease;
 }
 .signupBtn:hover{
-  background-color: #fff;
-  color: black;
-  border:2px solid #12486B;
+  background-color: var(--bgColor);
+  color: var(--primColor);
+  border:2px solid var(--secColor);
 }
 .navbar {
   /* background-color: hsl(212, 17%, 85%); */

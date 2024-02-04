@@ -6,6 +6,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--primColor);
+    
 }
 .replyPageSec div{
     /* box-shadow: -3px 3px 5px rgba(0,0,0,0.3); */
@@ -14,8 +16,9 @@
 }
 .replyPageSec ul{
     margin: 1rem;
-    border: 2px solid rgba(0,0,0,0.2);
+    border: 2px solid var(--secColor);
     padding: 0.5rem;
+    
 
 }
 .replyPageSec ul h3{
@@ -23,7 +26,7 @@
 
 }
 .replyPageSec ul li{
-    background-color: rgb(226, 237, 255);
+    background-color:var(--boxColor);
     padding: 1rem 0.5rem;
    margin: 1rem;
    border-radius: 0.5rem;
@@ -37,7 +40,7 @@
     width: 4rem;
     border: none;
     height: var(--btnHeight);
-    background-color: var(--btnBgcolor);
+    background-color: var(--secColor);
     color: #fff;
    border-radius: 0.5rem;
 

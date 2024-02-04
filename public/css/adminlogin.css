@@ -7,9 +7,10 @@
     align-items: center;
     padding: 2rem;
     box-sizing: border-box;
+    color: var(--primColor);
 }
 .adminSec h3{
-    background-color: rgb(255, 218, 149);
+    background-color:rgb(241, 99, 99);
     padding: 1rem;
     width: 50%;
     border-radius: 0.5rem;
@@ -22,6 +23,7 @@
     border:1px solid rgba(0,0,0,0.3);
     height: 16rem;
     padding: 3rem 1rem;
+    background-color: var(--boxColor);
 }
 
 .adminSec form input{
@@ -31,9 +33,14 @@
 
 .adminSec form button{
     width: var(--btnWidth);
-    background-color: var(--btnBgcolor);
+    background-color: var(--secColor);
     color: #fff;
     height: 2rem;
     cursor: pointer;
     border: none;
+}
+
+.adminSec form button:hover{
+   background-color: var(--bgColor);
+   border: 2px solid var(--secColor);
 }

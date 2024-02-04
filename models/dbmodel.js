@@ -8,6 +8,10 @@ const Schema=new mongoose.Schema({
     askQuery:{
         type:String,
         required:true
+    },
+    currentTime:{
+        type:String,
+        default:Date.now()
     }
 })
 

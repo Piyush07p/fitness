@@ -3,7 +3,8 @@
     width: 100%;
     padding:2rem 0;
     display: flex;
-    background-color:#d3d3d3;
+    background-color:var(--bdColor);
+    color: var(--primColor);
     box-sizing: border-box;
 }
 .assideDiv{
@@ -11,7 +12,8 @@
     box-sizing: border-box;
     padding: 1rem;
     /* border: 2px solid; */
-    background-color: #fff;
+     color: var(--primColor);
+background-color: var(--boxColor);
     margin-right: 0.5rem;
 }
 .assideDiv ul li{
@@ -36,7 +38,7 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
-    background-color: #fff;
+    background-color: #181818;
 }
 .userDetailDiv{
     width: 16rem;
