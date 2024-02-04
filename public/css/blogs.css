@@ -102,6 +102,7 @@ body {
 .post-main {
     max-width: 1200px;
     margin: 1.5rem auto;
+    color: var(--primColor);
 }
 
 .blogHeading{
