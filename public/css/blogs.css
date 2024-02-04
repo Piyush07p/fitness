@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     letter-spacing: 0.08rem;
+    color: var(--primColor);
 }
 
 .mainDiv {
@@ -80,7 +81,7 @@ body {
     color: #fff;
     width: var(--btnWidth);
     height: var(--btnHeight);
-    background-color: var(--btnBgcolor);
+    background-color: var(--secColor);
     border: none;
     text-align: center;
     cursor: pointer;

@@ -24,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    color: var(--primColor);
     
 }
 .contact_sec header{
@@ -111,7 +112,7 @@ main{
     pointer-events: none;
 }
 .formBox button{
-    background-color:#12486B ;
+    background-color:var(--secColor);
     color: #fff;
     width: 22%;
     font-size: 2vh;

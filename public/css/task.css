@@ -1,4 +1,6 @@
 @import "footer.css";
+@import "home.css";
+
 *{
   margin:0;
   padding: 0;
@@ -7,6 +9,7 @@ main{
   margin-top: 2rem;
   font-size: xx-large;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--primColor);
 }
 h3{
   text-align: center;
@@ -22,7 +25,7 @@ h3{
   
 }
 .task-div{
-  background-color: hsl(212, 17%, 85%);
+  background-color:var(--boxColor);
    display: flex;
    flex-direction: column;
   padding :1rem;
@@ -50,7 +53,7 @@ h3{
   height: 3rem;
   font-size: 1rem;
   border-radius: 0.5rem;
-  background: #12486B;
+  background: var(--secColor);
   cursor: pointer;
   border: none;
   color:white;
@@ -61,8 +64,7 @@ h3{
 }
 .taskBtn:hover{
 
-  border: 2px solid #12486B;
-  background-color: #fff;
-  color: black;
+  border: 2px solid var(--secColor);
+  background-color: var(--boxColor);
   transform: scale(1.01);
 }
