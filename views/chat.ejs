@@ -74,7 +74,7 @@
                         </form>
                         <button onclick="replyfunc(<%=ind%>)">reply</button>
                         <form style="display: inline;" action="/askquery/delete/<%=elem._id%>" method="post">
-                           <% if(elem.name==msg){%>
+                           <% if(elem.name==msg||elem.name=="admin"){%>
                             <button>delete</button>
                             <%}%>
                         </form>

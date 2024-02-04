@@ -22,7 +22,7 @@ const controuter=require('./routes/contactRoute.js')
 
 //*****************( )*********************
 
-
+const createChat=require('./chatgpt.js')
 
 
 //all middleware used
@@ -92,6 +92,7 @@ app.use('/contact',controuter)
 //database configuration
 const db_url=process.env.MONGO_URL
 connectDb(db_url)
+// createChat()
 
 app.listen(process.env.PORT,()=>{
     console.log(`server running at port ${process.env.PORT}` )

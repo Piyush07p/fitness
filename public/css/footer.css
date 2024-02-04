@@ -1,7 +1,8 @@
+@import 'home.css';
 
 footer{
 
-    background-color: #12486B;
+    background-color: var(--boxColor);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     
@@ -43,7 +44,7 @@ footer div span{
 
 footer div  form textarea{
     color: white;
-    background-color: rgb(50, 45, 97);
+    background-color: var(--boxColor);
     padding: 0.5rem;
     width: 400px;
     height: 100px;
