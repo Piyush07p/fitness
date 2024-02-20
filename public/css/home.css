@@ -1,13 +1,8 @@
 @import "footer.css";
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: Arial;
-  background-color: var(--bgColor);
+  margin: 0;
 }
 
 :root {
@@ -15,13 +10,15 @@ body {
   --btnHeight: 2rem;
   --btnBgcolor: #12486B;
   --primColor: #fff;
-  --secColor: #FD643D;
-  --bgColor: #111;
-  --boxColor: #272727;
+  --secColor:#FD643D;
+  --bgColor:#111;
+  --boxColor:#272727;
 
 }
-
-.signupBtn {
+body{
+  background-color: var(--bgColor);
+}
+.signupBtn{
   height: 2rem;
   cursor: pointer;
   position: relative;
@@ -33,20 +30,15 @@ body {
   border: none;
   transition: all 0.3s ease;
 }
-
-.signupBtn:hover {
+.signupBtn:hover{
   background-color: var(--bgColor);
   color: var(--primColor);
-  border: 2px solid var(--secColor);
+  border:2px solid var(--secColor);
 }
-
 .navbar {
   /* background-color: hsl(212, 17%, 85%); */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   padding: 15px 0;
-  position: absolute;
-  top: 0;
-  background: transparent;
   /* position: fixed; */
   width: 100%;
   height: 3rem;
@@ -63,13 +55,12 @@ body {
 }
 
 .logo {
-  background-color: #fff;
+
   font-weight: bold;
-  /* color: #ECF0F1; */
+  color: #ECF0F1;
   display: flex;
   height: 100%;
   align-items: center;
-  margin-left: 1rem;
 }
 
 .logo img {
@@ -160,7 +151,6 @@ body {
     background-image: url('/assets/slideImg1.jpg');
     background-size: 100% 100%;
   }
-
   32% {
     background-image: url('/assets/slideImg2.jpg');
     background-size: 100% 100%;
@@ -188,10 +178,6 @@ body {
 
 }
 
-.slider_div h1 {
-  font-size: 3rem;
-}
-
 .slider_div p {
   font-size: 1.5em;
   margin-bottom: 80px;
@@ -206,15 +192,13 @@ body {
 }
 
 .feature_sec h1 {
-  font-size: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .feature_cont {
-  width: 100%;
-  /* padding: 1rem; */
-  /* margin: 1rem; */
+
+  padding: 1rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -222,15 +206,15 @@ body {
 }
 
 .feature_div {
-  width: 40%;
+  width: 20rem;
   display: flex;
   margin: 2rem;
   flex-direction: column;
-  /* align-items: center; */
-  /* padding: 0.2rem; */
+  align-items: center;
+  padding: 0.2rem;
   background-color: var(--boxColor);
   /* border: 2px solid rgba(0,0,0,0.3); */
-  box-shadow: 1px 2px 5px rgba(250, 249, 249, 0.3);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
 
@@ -252,13 +236,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
 
-}
-
-.feature_div .div2 h3 {
-  margin-bottom: 1rem;
 }
 
 .feature_div .div2 button {
@@ -281,45 +260,30 @@ body {
 }
 
 .bmi-span {
-  color: var(--bgColor);
+  color:var(--bgColor);
 }
 
-.bmiSection {
+.bmiSection{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--primColor);
-
+  
 }
-
-.bmiSection h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
 .home-wrapper {
-  padding: 3rem 2rem;
-  width: 80%;
+  padding: 15px;
+  width: 70%;
   border-radius: 5px;
-  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.4);
+  box-shadow:-1px 1px 5px rgba(0,0,0,0.4);
   background-color: var(--boxColor);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.home-wrapper p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
 }
 
 .bmi-input {
-  width: 25rem;
+  margin: 0 2.4rem;
   padding: 0.5rem;
-  margin-left: 1rem;
-  border-radius: 6px;
+  width: 20rem;
 }
 
 .bmi-button {
@@ -335,13 +299,13 @@ body {
 
 .bmi-button:hover {
   transform: scale(1.04);
-
+  
 }
 
 #home-output {
-  display: none;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  
+   padding: 1rem;
+   border-radius: 0.5rem;
 }
 
 

@@ -1,63 +1,48 @@
 @import 'home.css';
 
-footer {
+footer{
 
     background-color: var(--boxColor);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-
+    
 }
 
-#footer-content {
+#footer-content{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem 0;
-
+    min-height: 9rem;
+    flex-wrap: wrap;
 }
-
-.footerlogo {
-    display: flex;
-    flex-direction: column;
+footer div ul{
+    padding: 0;
 }
-
-.footerlogo img {
-    width: 7rem;
-    background: #fff;
-}
-
-.footer-para {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 1rem;
-    width: 80%;
-    margin: auto;
-    border-top: 1px solid rgba(128, 128, 128, 0.304);
-}
-
-footer div ul {
-    display: flex;
-
-}
-
-footer div ul li {
+footer div ul li{
     list-style-type: none;
     line-height: 1.4rem;
-    margin-right: 0.5rem;
-    font-size: 0.85rem;
 }
 
-footer div ul li a {
+footer div ul li a{
     color: white;
     text-decoration: none;
 }
 
-footer div span {
+footer div span{
     font-size: 1.1em;
     line-height: 2rem;
 }
+.footerlogo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-footer div form textarea {
+}
+.footerlogo img{
+    width: 5rem;
+}
+
+footer div  form textarea{
     color: white;
     background-color: var(--boxColor);
     padding: 0.5rem;
@@ -68,42 +53,39 @@ footer div form textarea {
     margin-top: 0.4rem;
 }
 
-footer form {
+footer form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-footer #submit {
+footer #submit{
     border: none;
     margin-top: 0.55rem;
     border-radius: 25px;
     height: 2rem;
     width: 5rem;
 }
-
-#copyright {
+#copyright{
     color: #a6a5a5;
     margin-left: 2rem;
 }
-
-@media screen and (max-width: 700px) {
-
-    footer {
+@media screen and (max-width: 700px){
+    
+    footer{
         padding: 1rem;
     }
 }
 
-@media screen and (max-width: 600px) {
-    * {
+@media screen and (max-width: 600px){
+    *{
         font-size: 12px !important;
     }
-
-    footer div form textarea {
-        width: 300px;
+    footer div  form textarea{
+        width:300px;
         height: 80px;
     }
 
-
+ 
 }
