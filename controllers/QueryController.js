@@ -1,7 +1,7 @@
 const session = require('express-session');
 const dataModel=require('../models/dbmodel.js')
 const replyModel=require('../models/replymodel.js')
-
+const moment=require('moment')
 
 
 
@@ -12,7 +12,8 @@ class ControllerClass{
         console.log(req.body);
         const data=new dataModel({
             name:req.body.name,
-            askQuery:req.body.textarea
+            askQuery:req.body.textarea,
+            currentTime:moment().toString()
         })
         await data.save()
         console.log("query added successfully")
@@ -67,12 +68,14 @@ class ControllerClass{
         }
     }
 
+// -------------------(replies)--------------------------
     static replyData=async(req,res)=>{
         try{
             const data=new replyModel({
                 queryId:req.body.qid,
                 userName:req.body.name,
-                reply:req.body.replies
+                reply:req.body.replies,
+                currentTime:moment().toString()
             })
             await data.save()
             res.redirect("/askquery")

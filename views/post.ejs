@@ -9,32 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img  src="assets/fit_logo.png" alt="">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/askquery">Fit Q&A</a></li>
-                    <li><a href="/blogs">Blog</a></li>
-                    <li><a href="/task">Tasks</a></li>
-                    <li><a href="/contact">Contact US</li>
-                </ul>
-                <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
-            </div>
-        </nav>
-        <div  id="mySidebar" >
-            <button onclick="sidebar_close()">Close &times;</button>
-            <a href="/">Home</a>
-            <a href="/askquery">Fit Q&A</a>
-            <a href="/blogs">Blog</a>
-            <a href="/task">Tasks</a>
-            <a href="/contact">Contact Us</a>
-          </div>
-    </header>
-
+    <%- include('header')%>
+    
     <main class="post-main">
         <section>
             <div class="banner_img">
@@ -74,43 +50,11 @@
         </article>
 
         <hr>
-
-        <!-- <section class="commentSection">
-            <div class="commentBox">
-                <p>Leave a Comment</p>
-                    <form class="commentForm">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <textarea placeholder="Type your comment here..." rows="10"></textarea>
-                        <button type="submit">Comment</button>
-                    </form>
-            </div>
-        </section> -->
     </main>
 
-    <footer>
-        <div id="footer-content">
+    <!-- -----------(footer)---------- -->
+    <%- include('footer')%>
 
-        <div class="footerlogo">
-            <img  src="./assets/fit_logo.png" alt="logo"> 
-            <p>copyright
-                <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
-                2023 Fit Bucket
-            </p>
-        </div>
-
-        <div>
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="/blogs">Blog</a></li>
-                <li><a href="/task">Tasks</a></li>
-                <li><a href="/sampark">Contact Us</a></li>
-            </ul>
-        </div>
-       
-        </div>
-        
-    </footer>
     <script src="./js/index.js"></script>
     <script src="./js/post.js"></script>
 </body>

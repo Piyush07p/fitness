@@ -68,3 +68,15 @@ background-color: var(--boxColor);
   display: flex;
   padding: 0.5rem;
 }
+
+
+#blogsSection{
+    color: #fff;
+}
+.blogContainer{
+    padding: 1rem;
+}
+.blogContainer:nth-child(1) div{
+    margin: 1rem 0;
+
+}

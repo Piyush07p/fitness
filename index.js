@@ -19,6 +19,7 @@ const router=require('./routes/Queryroute.js')
 const authrouter=require('./routes/userAuth.js')
 const adminrouter=require('./routes/adminRoute.js')
 const controuter=require('./routes/contactRoute.js')
+const blogrouter=require('./routes/blogRoute.js')
 
 //*****************( )*********************
 
@@ -46,9 +47,20 @@ app.get('/chat',(req,res)=>{
     res.render('chat')
 })
 
-app.get('/blogs',(req,res)=>{
+const blogModel=require('./models/blogmodel.js')
+app.get('/blogs',async (req,res)=>{
     // res.sendFile(path.join(__dirname,'views','blogs.ejs'))
-    res.render('blogs',{message:req.session.message})
+    const blogData=await blogModel.find()
+    const filteredData=blogData.filter((elem)=>elem.isVerified===true)
+    res.render('blogs',{
+        message:req.session.message,
+        data:filteredData
+
+    })
+})
+
+app.get('/createBlog',(req,res)=>{
+    res.render('createBlog')
 })
 
 app.get('/task',(req,res)=>{
@@ -83,12 +95,12 @@ app.get('/posts',(req,res)=>{
 
 
 
-//all rourtes
+//all routes
 app.use('/askquery',router)
 app.use('/userAuth',authrouter)
 app.use('/admin',adminrouter)
 app.use('/contact',controuter)
-
+app.use('/blogpage',blogrouter)
 //database configuration
 const db_url=process.env.MONGO_URL
 connectDb(db_url)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/createBlog.css">
+
+    <title>Document</title>
+</head>
+<body>
+     <%- include('header')%>
+    <main class="maincreateBlog">
+         <form method="POST" action="/blogpage/createBlog">
+              <div>
+                  <label>Enter title of Blog</label> <br> <br>
+                  <input name="title" type="text" placeholder="enter the title">
+              </div>
+              <div>
+                <label>Author name</label> <br> <br>
+                <input name="author" type="text" placeholder="enter the author name">
+            </div>
+            <div>
+                <label>Write your blog</label> <br> <br>
+                <textarea name="blogData" placeholder="write your blog here..." name="" id=""  rows="13"></textarea>
+            </div>
+            <div>
+                <button class="signupBtn">Submit</button>
+            </div>
+         </form>
+    </main>
+     <!-- -----------(footer)---------- -->
+     <%- include('footer')%>
+</body>
+</html>

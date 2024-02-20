@@ -10,19 +10,31 @@
     <section class="replyPageSec">
         <h1>Replies</h1>
        <div>
-        <%  replyData.forEach((elem)=>{ %>
-            <ul>
+         <% if(replyData.length>0){%>
+            <%  replyData.reverse().forEach((elem)=>{ %>
+                <ul>
+                    
+                    <h3 style="display: flex; justify-content: space-between;">
+                        <span >
+                            <img  style="width: 2rem; border-radius: 50%;" src="/assets/profile_logo.jpeg" /> 
+                            <span style="margin-left: 1rem;"> <%=elem.userName%></span>
+                        </span>
+                        <span style="font-size: 0.7rem;">
+                           <%=elem.currentTime%>
+                        </span>
+                    </h3>
+                    <li><%=elem.reply%></li>
+                    <form action="/askquery/reply/delete/<%=elem._id%>" method="post">
+                       <%if(elem.userName==uname){%>
+                        <button style="display: inline;">delete</button>
+                        <%}%>
+                    </form>
                 
-                <h3><img  style="width: 2rem; border-radius: 50%;" src="/assets/profile_logo.jpeg" />  <%=elem.userName%></h3>
-                <li><%=elem.reply%></li>
-                <form action="/askquery/reply/delete/<%=elem._id%>" method="post">
-                   <%if(elem.userName==uname){%>
-                    <button style="display: inline;">delete</button>
-                    <%}%>
-                </form>
-            
-            </ul>
-        <% }) %>
+                </ul>
+            <% }) %>
+         <%}else{%>
+             <p>No replies present</p>
+         <%}%>
        </div>
        
     </section>

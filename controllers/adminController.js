@@ -1,5 +1,6 @@
 
 const userModel=require('../models/userModel')
+const blogModel=require('../models/blogmodel')
 const bcrypt=require('bcryptjs')
 
 async function adminLogin(req,res){
@@ -16,10 +17,15 @@ async function adminLogin(req,res){
 
 async function adminDashboard(req,res){
     try{
-        const result=await userModel.find({is_admin:0})
+        const alluser=await userModel.find({is_admin:0})
+        const blogs=await blogModel.find()
         const adminData=await userModel.find({is_admin:1})
         if(req.session.admin_id){
-            res.render("admindashboard",{userData:result,adminName:"You are logged in as admin"});
+            res.render("admindashboard",{
+                userData:alluser,
+                blogData:blogs,
+                adminName:"You are logged in as admin"
+            });
         }else{
             res.redirect('/admin')
         }

@@ -61,6 +61,9 @@
                          <div class="div1">
                               <img src="assets/blogimg.jpg" alt="">
                          </div>
+                         <div class="div_detail">
+                            <p>Read and write fitness related blogs..</p>
+                        </div>
                          <div class="div2">
                                 <h3>Read fitness blogs</h3>
                                 <a href="/blogs">
@@ -72,6 +75,9 @@
                         <div class="div1">
                              <img src="assets/slideImg2.jpg" alt="">
                         </div>
+                        <div class="div_detail">
+                                <p>Complete fitness task as per your preference</p>
+                        </div>
                         <div class="div2">
                                <h3>Complete fitness task</h3>
                                <a href="/task">
@@ -82,6 +88,9 @@
                    <div class="feature_div">
                     <div class="div1">
                          <img src="assets/dietimgjpg.jpg" alt="">
+                    </div>
+                    <div class="div_detail">
+                        <p>Check nutritional values of different food items</p>
                     </div>
                     <div class="div2">
                            <h3>Check nutritional values</h3>
@@ -129,34 +138,17 @@
     <br>
     <br>
 
-
-    <!----------------- footer_code -------------->
-
-    <footer>
-        <div id="footer-content">
-
-        <div class="footerlogo">
-            <img  src="./assets/fit_logo.png" alt="logo"> 
-            <p>copyright
-            <i class="fa-regular fa-copyright" style="color: #b3b3b3;"></i>
-             2023 Fit Bucket
-            </p>
-        </div>
-
-        <div>
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="/blogs">Blog</a></li>
-                <li><a href="/task">Tasks</a></li>
-                <li><a href="/sampark">Contact Us</a></li>
-            </ul>
-        </div>
-       
-        </div>
-        
-    </footer>
+    <!-- -----------(footer)---------- -->
+    <%- include('footer')%>
     
     <script src="./js/home.js"></script>
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".feature_div"), {
+            max: 25,
+            speed: 200
+        });
+    </script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
                 <ul>
                     <li>Dashboard</li>
                     <li>Messages</li>
-                    <li>Setting</li>
+                    <li><a style=" color: #fff;" href="#blogsSection">Blogs</a></li>
                 </ul>
          </div>
          <div class="dataDiv">
@@ -46,6 +46,34 @@
              </div>
          </div>
 
+    </section>
+    <section id="blogsSection">
+            <div class="blogContainer">
+                <% blogData.forEach((elem)=>{%>
+                      <div style="width: 100%; border: 1px solid #FD643D;">
+                          <div style="display: flex; padding:0 1rem; justify-content: space-between;">
+                            <h3>Title: <%=elem.title%></h3>
+                            <h3>Author: <%=elem.author%></h3>
+                          </div>
+                          <div  style="display: flex; white-space: pre-wrap; background-color: #272727; padding:0 1rem; justify-content: space-between;">
+                            <p><%=elem.blogData%></p>
+                          </div>
+                          <div style="display: flex;">
+                             <form action="/blogpage/delete/<%=elem._id%>" method="POST">
+                                <button style="margin-left: 1.4rem;" class="signupBtn">remove</button>
+                             </form>
+                             <form action="/blogpage/approve/<%=elem._id%>" method="POST">
+                              
+                                   <%if(elem.isVerified){%>
+                                      <p style=" border:1px solid #FD643D; padding: 0.2rem; position: absolute; right: 2rem;">approved</p>
+                                    <%}else{%>
+                                        <button style="margin-left: 1.4rem;" class="signupBtn"> approve </button>
+                                    <%}%>
+                             </form>
+                          </div>
+                      </div>
+                <% })%>
+            </div>
     </section>
 </body>
 </html>

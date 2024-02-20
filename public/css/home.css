@@ -216,6 +216,7 @@ body{
   /* border: 2px solid rgba(0,0,0,0.3); */
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
+
 }
 
 .feature_div:hover {
@@ -239,6 +240,21 @@ body{
   cursor: pointer;
 
 }
+.div_detail{
+  width: 75%;
+  position: absolute;
+  top: 30%;
+  background-color: var(--secColor);
+
+  transform: translateZ(20px) scaleY(0);
+  transition: 0.5s;
+  transform-origin: top;
+  padding: 2rem 1rem;
+}
+.feature_div:hover .div_detail{
+  transform: translateZ(20px) scaleY(1);
+
+}
 
 .feature_div .div2 button {
   width: var(--btnWidth);
@@ -249,6 +265,9 @@ body{
   font-weight: 600;
   letter-spacing: 0.2rem;
   border: none;
+  filter: drop-shadow(
+    0px 10px 25px rgba(0,0,0,0.5)
+  );
 
 }
 

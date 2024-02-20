@@ -11,7 +11,7 @@ const Schema=new mongoose.Schema({
     },
     currentTime:{
         type:String,
-        default:Date.now()
+        
     }
 })
 

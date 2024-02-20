@@ -13,7 +13,6 @@ const Schema2=new mongoose.Schema({
     },
     currentTime:{
         type:String,
-        default:Date.now()
     }
 })
 
