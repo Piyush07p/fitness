@@ -21,13 +21,13 @@
             <h1 class="blogHeading"><%=fullBlog.title%></h1>
             <div class="about-author">
                 <address>
-                    <p class="postAuthor">Written by :<%=fullBlog.author%></p>
+                    <p class="postAuthor"> <span style="color: #FD643D" >Written by :</span> <%=fullBlog.author%></p>
                     <p class="postDate"> <%=fullBlog.createdTime%></p> 
                 </address>
             </div>
         </section>
         <hr>
-        <article style="white-space: pre-wrap;">
+        <article class="full_article" style="white-space: pre-wrap;">
               <p >
                 <%=fullBlog.blogData%>
               </p>

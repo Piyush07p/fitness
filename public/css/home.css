@@ -338,4 +338,7 @@ body{
   #sidebarBtn {
     display: flex;
   }
+  .logo img {
+    width: 4rem;
+  }
 }

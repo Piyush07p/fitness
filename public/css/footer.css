@@ -79,9 +79,7 @@ footer #submit{
 }
 
 @media screen and (max-width: 600px){
-    *{
-        font-size: 12px !important;
-    }
+    
     footer div  form textarea{
         width:300px;
         height: 80px;

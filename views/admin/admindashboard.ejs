@@ -51,9 +51,13 @@
 
     </section>
     <section id="blogsSection">
+          <div style="display: flex; padding: 0 1rem;">
+            <h3 style="border: 1px solid #FD643D; padding: 1rem; margin: 0 1rem;">Total blogs: <%=blogData.length%></h3> 
+            <h3 style="border: 1px solid #FD643D; padding: 1rem; margin: 0 1rem;">Approved blogs: <%=verifiedBlogs.length%></h3> 
+          </div>
             <div class="blogContainer">
                 <% blogData.reverse().forEach((elem)=>{%>
-                      <div style="width: 100%; border: 1px solid #FD643D;">
+                      <div class="innerBlogDiv" >
                           <div style="display: flex; padding:0 1rem; justify-content: space-between;">
                             <h3>Title: <%=elem.title%></h3>
                             <h3>Author: <%=elem.author%></h3>

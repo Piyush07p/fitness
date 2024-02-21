@@ -72,11 +72,20 @@ background-color: var(--boxColor);
 
 #blogsSection{
     color: #fff;
+    /* border: 2px solid red; */
 }
 .blogContainer{
     padding: 1rem;
 }
+.innerBlogDiv{
+    padding: 2rem 0;
+    width: 100%; 
+    border: 1px solid #FD643D;
+     margin: 1rem 0;
+
+}
 .blogContainer:nth-child(1) div{
     margin: 1rem 0;
+    
 
 }

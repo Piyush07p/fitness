@@ -19,11 +19,13 @@ async function adminDashboard(req,res){
     try{
         const alluser=await userModel.find({is_admin:0})
         const blogs=await blogModel.find()
+        const verifiedBlogs=blogs.filter((e)=>e.isVerified===true)
         const adminData=await userModel.find({is_admin:1})
         if(req.session.admin_id){
             res.render("admindashboard",{
                 userData:alluser,
                 blogData:blogs,
+                verifiedBlogs:verifiedBlogs,
                 adminName:"You are logged in as admin"
             });
         }else{

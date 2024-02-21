@@ -8,7 +8,7 @@
 }
 .maincreateBlog form{
     padding: 1rem;
-    width: 40%;
+    width: 50%;
     background-color: #272727;
 }
 .maincreateBlog form div{
@@ -33,4 +33,16 @@
 }
 .maincreateBlog div button{
    
+}
+
+@media (max-width:950px){
+    .maincreateBlog form{
+       width: 65%;
+    }
+}
+
+@media (max-width:650px){
+    .maincreateBlog form{
+       width: 85%;
+    }
 }
