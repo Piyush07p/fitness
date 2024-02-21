@@ -4,49 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts</title>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="stylesheet" href="/css/blogs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
     <%- include('header')%>
     
     <main class="post-main">
-        <section>
+        <p >
+            <a style="color: #FD643D; margin-left: 2rem;" href="/blogs">Blog-page</a>
+        </p>
+        <section class="post_detail_sec">
             <div class="banner_img">
                 <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya291dHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="banner-image" class="banner_post_img">
             </div>
-            <h1 class="blogHeading">Power of Walking </h1>
+            <h1 class="blogHeading"><%=fullBlog.title%></h1>
             <div class="about-author">
                 <address>
-                    <p class="postAuthor">Written by Someone</p>
-                    <p class="postDate">Wednesday Oct 4</p> 
+                    <p class="postAuthor">Written by :<%=fullBlog.author%></p>
+                    <p class="postDate"> <%=fullBlog.createdTime%></p> 
                 </address>
             </div>
         </section>
-
         <hr>
-
-        <article>
-            <p id="post_article_para1">
-                The Article Para 1
-            </p>
-            <br>
-            <p id="post_article_para2">
-                The Article Para 2
-            </p>
-            <br>
-            <p id="post_article_para3">
-                The Article Para 3
-            </p>
-            <br>
-            <p id="post_article_para4">
-                The Article Para 4
-            </p>
-            <br>
-            <p id="post_article_para5">
-                The Article Para 5
-            </p>
+        <article style="white-space: pre-wrap;">
+              <p >
+                <%=fullBlog.blogData%>
+              </p>
         </article>
 
         <hr>
@@ -55,7 +39,7 @@
     <!-- -----------(footer)---------- -->
     <%- include('footer')%>
 
-    <script src="./js/index.js"></script>
-    <script src="./js/post.js"></script>
+    <!-- <script src="./js/index.js"></script>
+    <script src="./js/post.js"></script> -->
 </body>
 </html>

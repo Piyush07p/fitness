@@ -78,10 +78,10 @@ app.get('/diet',(req,res)=>{
     // res.sendFile(path.join(__dirname,'views','diet.ejs'))
     res.render('diet')
 })
-app.get('/posts',(req,res)=>{
-    // res.sendFile(path.join(__dirname,'views','diet.ejs'))
-    res.render('post')
-})
+// app.get('/posts',(req,res)=>{
+//     // res.sendFile(path.join(__dirname,'views','diet.ejs'))
+//     res.render('post')
+// })
 
 
 // routes for login signup

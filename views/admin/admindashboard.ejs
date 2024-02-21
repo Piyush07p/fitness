@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/admindashboard.css">
 </head>
 <body>
+    <p >
+        <a style="color: #FD643D; margin-left: 2rem;" href="/">home</a>
+    </p>
     <h1 style="text-align: center; color: #fff;">Fitbucket admin dashboard</h1>
     <div style="width: 100%; display: flex; justify-content: space-between; padding: 0 3rem;box-sizing: border-box;">
         <p style="color: red;"><%=adminName%></p>
@@ -49,7 +52,7 @@
     </section>
     <section id="blogsSection">
             <div class="blogContainer">
-                <% blogData.forEach((elem)=>{%>
+                <% blogData.reverse().forEach((elem)=>{%>
                       <div style="width: 100%; border: 1px solid #FD643D;">
                           <div style="display: flex; padding:0 1rem; justify-content: space-between;">
                             <h3>Title: <%=elem.title%></h3>

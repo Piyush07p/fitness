@@ -39,19 +39,10 @@ async function deleteBlog(req,res){
 
 async function openFullblog(req,res){
     try {
+        const resp=await blogModel.findById(req.params.id)
+        console.log(resp)
+        res.render('post',{fullBlog:resp})
 
-        res.render('post')
-        
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-async function getopenFullblog(req,res){
-    try {
-
-        res.render('post')
-        
     } catch (error) {
         console.log(error)
     }
@@ -61,6 +52,6 @@ module.exports={
     createBlog,
     approveBlog,
     deleteBlog,
-    openFullblog,
-    getopenFullblog
+    openFullblog
+    
 }

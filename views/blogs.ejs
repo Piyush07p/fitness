@@ -25,9 +25,10 @@
                             </span>, you can read fitness blog here..</h3>
                         <h1>Blogs</h1>
                     </div>
-                    <button style="width: 7rem;" class="signupBtn">
-                        <a style="color: #fff; text-decoration: none;" href="/createBlog">Create Blog</a>
-                    </button>
+                <a style="color: #fff; text-decoration: none;" href="/createBlog">
+                    <button style="width: 7rem;" class="signupBtn">Create Blog</button>
+                </a>           
+                   
                 </div>
                 <section class="articleSection">
                     <% data.reverse().forEach((elem,index)=>{%>
@@ -47,7 +48,7 @@
                                         <p style="font-size: 0.7rem;"> <span style="color:#FD643D;">Posted on:</span>
                                  <%=elem.createdTime%>
                                         </p>
-                                        <form action="/blogpage/posts/<%=elem._id%>" method="POST">
+                                        <form action="/blogpage/posts/<%=elem._id%>" method="GET">
                                             <button class="read-btn">Full Read</button>
                                         </form>
                                     </div>

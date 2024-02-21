@@ -60,7 +60,7 @@
 
 .read-btn {
     all: unset;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     font-weight: 600;
     cursor: pointer;
     /* border-bottom: 1px solid transparent; */
@@ -96,7 +96,7 @@
 }
 
 
-/* post.html */
+/* ------------------(post.ejs)------------------ */
 
 .post-main {
     max-width: 1200px;
@@ -112,9 +112,20 @@
 .post-main hr {
     margin: 3rem 0;
 }
-
+.post_detail_sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.banner_img{
+    display: flex;
+    justify-content: center;
+}
 .banner_img img {
-    width: 100%;
+    width: 90%;
+    height: 30rem;
+    object-fit: cover;
 }
 
 .about-author p{

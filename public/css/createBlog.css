@@ -18,9 +18,18 @@
 .maincreateBlog div input{
     width: 100%;
     height: 2rem;
+    background-color: #181818;
+   border: none;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 0 1rem;
 }
 .maincreateBlog div textarea{
     width: 100%;
+    background-color: #181818;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 .maincreateBlog div button{
    
