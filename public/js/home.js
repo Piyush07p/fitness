@@ -1,14 +1,14 @@
 function sidebar_open() {
-  document.getElementById("mySidebar").style.display = "flex";
+  document.querySelector(".nav-links").style.display = "block";
 }
 
 function sidebar_close() {
-  document.getElementById("mySidebar").style.display = "none";
+  document.querySelector(".nav-links").style.display = "none";
 }
 
 
 //*************(BMI calc code)**************** */
-let button=document.getElementById('home-btn');
+let button=document.getElementById('bmi-btn');
 
 button.addEventListener('click',() =>{
   const height = parseInt(document.getElementById('bmi-height').value);
