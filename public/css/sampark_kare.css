@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    padding: 1rem;
     color: var(--primColor);
     
 }
@@ -58,6 +58,8 @@ section i{
     color: #000;
     text-align: center;
 }
+
+/* ----------( form)------------- */
 main{
     width: 50%;
     padding:1.5rem 2.5rem;
@@ -71,15 +73,16 @@ main{
     
 }
 .formBox input{
-    width: 40vw;
-    background-color: transparent;
-   
+    width: 90%;
+    background-color: #272727;
+    height: 2rem;
+    box-sizing: border-box;
     border: transparent;
     outline: none;
     margin: 1.2rem;
-    /* padding: 1.4rem; */
+    color: var(--primColor);
     font-size: 0.8rem;
-    border-bottom: 2px solid ;
+    padding: 0 1rem;
 }
 .formBox label{
     margin: 1.2rem;
@@ -94,13 +97,14 @@ main{
     pointer-events: none;
 }
 .formBox textarea{
-    width: 40vw;
+    width: 90%;
+    background-color: #272727;
     height: 5rem;
     outline: none;
     margin: 20px;
     padding: 0.5rem;
     font-size: 0.8rem;
-    border: 2px solid;
+    color: #fff;
 }
 .formBox textarea ~label{
     left: 1.1rem;
@@ -139,4 +143,10 @@ main{
 .media ul li{
     list-style: none; 
     margin: 2rem 3rem
+}
+
+@media (max-width:620px){
+    main{
+        width: 75%;
+    }
 }

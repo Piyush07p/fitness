@@ -12,32 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="/assets/fit_logo.png" alt="">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/askquery">Fit Q&A</a></li>
-                    <li><a href="/blogs">Blog</a></li>
-                    <li><a href="/task">Tasks</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-                <button id="sidebarBtn" onclick="sidebar_open()">☰</button>
-            </div>
-        </nav>
-        <div id="mySidebar">
-            <button onclick="sidebar_close()">Close &times;</button>
-            <a href="/">Home</a>
-            <a href="/askquery">Fit Q&A</a>
-            <a href="/blogs">Blog</a>
-            <a href="/task">Tasks</a>
-            <a href="/sampark">Contact Us</a>
-        </div>
-    </header>
 
+    <%- include('header')%>
 <!-- ----------------(end of navbar)------------------------ -->
 
     <main>
@@ -108,7 +84,8 @@
         </div>
 
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/home.js"></script>
+
 </body>
 
 </html>

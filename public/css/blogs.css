@@ -66,14 +66,20 @@
 .date_posted p{
     font-size: 0.8rem;
 }
+.blogParaContainer{
+    background-color: #272727;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 90%;
+    height: 10rem;
+}
 .blogHeadline{
     background-color: #272727;
-    padding: 2rem 1rem;
-    white-space: pre-wrap;
-    width: 90%;
+    /* white-space: pre-wrap; */
+    width: 100%;
     max-height:8rem ;
     overflow: hidden;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 .article_img{
     width: 35%;

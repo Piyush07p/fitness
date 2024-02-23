@@ -11,13 +11,18 @@
 :root {
     --trans:all 0.5s ease;
 }
+.popupSec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .replyPopup{
-   width: 35rem;
+   width: 45%;
    border: 1px solid rgba(0,0,0,0.3);
    border-radius: 0.6rem;
    height: 17rem;
    top: -20rem;
-   background-color: var(--boxColor);
+   background-color: #191919;
    position: fixed;
    display: flex;
    flex-direction: column;
@@ -27,19 +32,25 @@
    margin: 0 auto;
 }
 .replyPopup form{
+    padding: 1rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.replyPopup form input{
+    width: 60%;
+    height: 2rem;
+    margin: 1rem;
+}
 .replyPopup form textarea{
-    width:20rem;
+    width: 60%;
     height: 4rem;
     margin: 1rem;
 }
 .replyPopup button{
     width: 6rem;
     height: 2rem;
-    margin: 1rem 0;
     cursor: pointer;
     transition: var(--trans)
 }
@@ -75,29 +86,31 @@
     margin: 1rem;
     background-color: var(--boxColor);
 }
-
-.chat_inp textarea{
+.chat_inp_form{
+    width: 100%;
+}
+.chat_inp_form textarea{
     height: 5rem;
-    width: inherit;
+    width: 80%;
     margin: 1rem ;
-    outline-color: rgb(7, 106, 245);
+    outline-color: var(--secColor);
     border-radius: 0.4rem;
     border:2px solid ;
     /* background-color: #242424; */
     /* background-color: rgba(0, 0, 0,0.1); */
     padding: 0 1rem;
 }
-.chat_inp input{
+.chat_inp_form input{
     height: 2rem;
-    width: inherit;
+    width: 80%;
     margin: 1rem ;
-    outline-color: rgb(7, 106, 245);
+    outline-color: var(--secColor);
     border-radius: 0.4rem;
     border:2px solid ;
     /* background-color: rgba(0, 0, 0,0.1); */
     padding: 0 1rem;
 }
-.chat_inp button{
+.chat_inp_form button{
     margin:0.5rem 1rem;
     width: 4rem;
     border-radius: 0.4rem;
@@ -133,6 +146,9 @@
 .query_box div{
     margin: 1rem;
 }
+.curr_time{
+    font-size: 0.8rem;
+}
 .query_box div button{
     width: 4rem;
     height: 2rem;
@@ -142,6 +158,12 @@
     border: none;
     cursor: pointer;
     transition: all 0.5s ease;
+
+}
+.askQuery{
+    background-color: #202020;
+    padding: 1rem 0.5rem ;
+    border-radius: 0.3rem;
 
 }
 .query_box button:hover{
@@ -163,20 +185,7 @@
     background-color: rgb(0,0,0,0.5);
 }
 
-/* .replyUL{
-    margin:0  1rem;
-    display: none;
-   padding: 1rem;
-}
-.replyUL li{
-    margin:0.3rem 1rem;
-    list-style:circle;
-    border: 1px solid rgba(0,0,0,0.4);
-    padding: 0.4rem 0.6rem;
-    border-radius: 1rem;
-    background-color: rgb(225, 250, 251);
 
-} */
 .replySection{
     padding: 1rem;
 }
@@ -186,7 +195,43 @@
 }
 .replyBtn{
     width: 6rem;
-    height: 2rem;
-    margin:0  1rem;
-    cursor: pointer;  
+    height: 1.4rem;
+    background-color: var(--boxColor);
+    margin:0 ;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer; 
+    transition: 0.5s ease ; 
+}
+@media (max-width:800px) {
+    .replyPopup{
+        width: 60%;
+    }
+    .replyPopup form input,.replyPopup form textarea{
+        width: 80%;
+    
+    }
+}
+@media (max-width:580px) {
+    .chat_inp{
+        width: 90%;
+    }
+    .chat_box{
+        width: 100%;
+    }
+    .query_box{
+        width: 100%;
+    }
+    .curr_time{
+        font-size: 0.5rem;
+    }
+    .replyPopup{
+        width: 80%;
+    }
+    .replyPopup form input,.replyPopup form textarea{
+        width: 80%;
+    
+    }
+    
+    
 }
