@@ -9,21 +9,21 @@ main{
 
 }
 .dietSearch div{
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .dietSearch div input{
-    width: 22rem;
+    width: 70%;
     height: 2rem;
     margin: 1rem;
 }
 .dietSearch div button{
     width: 5rem;
     height: 2.3rem;
-    background-color: var(--btnBgcolor);
+    background-color: var(--secColor);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -35,25 +35,24 @@ main{
 }
 .caloriesChart{
     width: 100%;
-    border: 2px solid rgba(0,0,0,0.2) ;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
 }
 .caloriesChart div{
-
-    border: 2px solid rgba(0,0,0,0.4);
+    /* border: 1px solid var(--secColor) ; */
     border-radius: 1rem;
-    width: 60%;
+    width: 80%;
     margin: 1rem;
 
 }
 .claoriesDiv1 h1{
     text-align: center;
     padding-top: 0.5rem  ;
+    font-size: 1.5rem;
     color: #fff;
     height: 2.4rem;
-    background-color: var(--btnBgcolor);
+    background-color: var(--secColor);
     
 }
 .claoriesDiv1 table{
@@ -69,7 +68,9 @@ main{
     border-radius: 1rem;
 }
 .dietTable{
-    background-color: #94c0dd;
+    width: 80%;
+    background-color: var(--boxColor);
+    color: #fff;
 }
 .caloriesGraph{
     width: 100%;

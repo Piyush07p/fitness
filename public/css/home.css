@@ -140,9 +140,10 @@ body{
 #slider_section {
   background-image: url(https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60);
   /* Add your background image URL */
-  background-size: cover;
+  background-size:contain;
   background-position: center;
   height: 100vh;
+  width: 100%;
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -189,10 +190,13 @@ body{
 }
 
 .slider_div p {
-  font-size: 1.5em;
+  font-size: 1rem;
   margin-bottom: 80px;
 }
-
+.slider_div h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
 .feature_sec {
   width: 100%;
   padding: 3rem 0;
@@ -368,7 +372,7 @@ body{
       padding: 0;
     }
     .authBtn button{
-      margin: 1rem;
+      margin-bottom: 1rem;
     }
     #sidebarBtn{
       display: flex;
@@ -377,6 +381,7 @@ body{
       display: block;
       position: absolute;
       top: 0;
+      left: 0;
       width: 100%;
       height: 2rem;
       background-color: var(--secColor);
@@ -388,10 +393,16 @@ body{
 }
 @media screen and (max-width:480px) {
 
-  #sidebarBtn {
-    
+  #slider_section{
+    height: 65vh;
+  }
+  .slider_div h1 {
+    font-size: 1.6rem;
   }
   .logo img {
     width: 4rem;
+  }
+  .feature_div {
+  
   }
 }
