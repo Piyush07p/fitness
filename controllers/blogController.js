@@ -2,10 +2,12 @@ const blogModel=require('../models/blogmodel')
 const moment=require('moment')
 async function createBlog(req,res){
     try {
+        console.log(req.body)
         const resp=await blogModel.create({
             title:req.body.title,
             author:req.body.author,
             blogData:req.body.blogData,
+            blogImg:req.file.filename,
             createdTime:moment().toString()
         })
         res.redirect('/blogs');

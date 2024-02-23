@@ -13,7 +13,7 @@
     padding: 1rem;
     /* border: 2px solid; */
      color: var(--primColor);
-background-color: var(--boxColor);
+    background-color: var(--boxColor);
     margin-right: 0.5rem;
 }
 .assideDiv ul li{
@@ -88,4 +88,10 @@ background-color: var(--boxColor);
     margin: 1rem 0;
     
 
+}
+
+@media (max-width:720px) {
+    .assideDiv{
+       width: 25%;
+    }
 }

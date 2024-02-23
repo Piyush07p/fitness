@@ -13,6 +13,10 @@ const blogSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    blogImg:{
+        type:String,
+        default:"blogImg-1708709987618.png"
+    },
     createdTime:{
         type:String,
     },

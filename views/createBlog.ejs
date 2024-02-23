@@ -11,7 +11,7 @@
 <body>
      <%- include('header')%>
     <main class="maincreateBlog">
-         <form method="POST" action="/blogpage/createBlog">
+         <form method="POST" action="/blogpage/createBlog" enctype="multipart/form-data">
               <div>
                   <label>Enter title of Blog</label> <br> <br>
                   <input name="title" type="text" placeholder="enter the title">
@@ -22,7 +22,11 @@
             </div>
             <div>
                 <label>Write your blog</label> <br> <br>
-                <textarea name="blogData" placeholder="write your blog here..." name="" id=""  rows="13"></textarea>
+                <textarea name="blogData" placeholder="write your blog here..."   rows="13"></textarea>
+            </div>
+            <div>
+                <label for="">Upload image (Optional) *png format</label> <br> <br>
+                <input name="blogImg" style="background-color:#272727; margin-left: -1rem;" type="file">
             </div>
             <div>
                 <button class="signupBtn">Submit</button>

@@ -12,11 +12,13 @@
     
     <main class="post-main">
         <p >
-            <a style="color: #FD643D; margin-left: 2rem;" href="/blogs">Blog-page</a>
+            <a style="color: #fff; text-decoration: none; margin-left: 2rem;" href="/blogs">
+                <i style="margin:0 0.3rem;" class="fa-solid fa-backward"></i>blogs
+            </a>
         </p>
         <section class="post_detail_sec">
             <div class="banner_img">
-                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya291dHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="banner-image" class="banner_post_img">
+                <img src="/uploads/<%=fullBlog.blogImg%>" >
             </div>
             <h1 class="blogHeading"><%=fullBlog.title%></h1>
             <div class="about-author">

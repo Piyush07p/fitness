@@ -6,14 +6,18 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="/css/admindashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
 </head>
 <body>
     <p >
-        <a style="color: #FD643D; margin-left: 2rem;" href="/">home</a>
+        <a style="color: #fff; text-decoration: none; margin-left: 2rem;" href="/">
+            <i style="margin:0 0.3rem;" class="fa-solid fa-backward"></i>home
+        </a>
     </p>
     <h1 style="text-align: center; color: #fff;">Fitbucket admin dashboard</h1>
     <div style="width: 100%; display: flex; justify-content: space-between; padding: 0 3rem;box-sizing: border-box;">
-        <p style="color: red;"><%=adminName%></p>
+        <!-- <p style="color: red;"><%=adminName%></p> -->
         <a href="/admin/logout"><button  style="width: 4rem; height: 2rem; cursor: pointer; ">Logout</button></a>
     </div>
     <section class="adminDash_sec">
