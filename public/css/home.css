@@ -65,7 +65,7 @@ body{
 
 .logo img {
   margin: 0 1rem;
-  width: 5.5rem;
+  width: 8.5rem;
 }
 
 .nav-links {
@@ -390,17 +390,22 @@ body{
       border: none;
       letter-spacing: 0.3rem;
     }
+    .logo img {
+      width: 7rem;
+  
+    }
 }
 @media screen and (max-width:480px) {
 
   #slider_section{
-    height: 65vh;
+    height: 65vh
   }
   .slider_div h1 {
     font-size: 1.6rem;
   }
   .logo img {
-    width: 4rem;
+    width: 5rem;
+
   }
   .feature_div {
   

@@ -60,7 +60,24 @@
 
     </section>
    <section class="contactmsgSec">
-        
+         <div class="contactmsgDiv1">
+             <h1>Contact message:</h1>
+         </div>
+         <div class="contactmsgDiv2">
+            <%contactMsg.reverse().forEach((elem)=>{%>
+                   <div>
+                        <h4><%=elem.name%></h4>
+                        <h4><%=elem.email%></h4>
+                        <p><%=elem.message%></p>
+                        <form style="position: absolute; top: 0; right: 0.5rem; " action="/contact/delete/<%=elem._id%>" method="POST">
+                             <button style="cursor: pointer; background-color: #272727; border: none; color: #fff;">
+                                <i class="fa-solid fa-xmark"></i>
+                             </button>
+                         </form>
+                   </div>
+            <%})%>
+
+         </div>
    </section>
 <!-- -----------------------(blog_section)----------------------------- -->
 
