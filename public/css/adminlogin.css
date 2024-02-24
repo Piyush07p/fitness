@@ -44,3 +44,16 @@
    background-color: var(--bgColor);
    border: 2px solid var(--secColor);
 }
+
+@media (max-width:720px){
+    .adminSec form{
+        width: 80%;
+    }
+}
+
+@media (max-width:480px){
+    .adminSec form{
+        width: 100%;
+        border-radius: 1rem;
+    }
+}

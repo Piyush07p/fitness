@@ -37,3 +37,16 @@
     border: 2px solid var(--secColor);
     background-color: var(--bgColor);
 }
+
+@media (max-width:720px){
+    .signup_sec form{
+        width: 70%;
+    }
+}
+
+@media (max-width:480px){
+    .signup_sec form{
+        width: 80%;
+        border-radius: 1rem;
+    }
+}

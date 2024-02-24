@@ -10,26 +10,31 @@
 
 </head>
 <body>
-    <p >
-        <a style="color: #fff; text-decoration: none; margin-left: 2rem;" href="/">
-            <i style="margin:0 0.3rem;" class="fa-solid fa-backward"></i>home
-        </a>
-    </p>
-    <h1 style="text-align: center; color: #fff;">Fitbucket admin dashboard</h1>
-    <div style="width: 100%; display: flex; justify-content: space-between; padding: 0 3rem;box-sizing: border-box;">
-        <!-- <p style="color: red;"><%=adminName%></p> -->
-        <a href="/admin/logout"><button  style="width: 4rem; height: 2rem; cursor: pointer; ">Logout</button></a>
+    
+    <div style="width: 100%; display: flex; justify-content: space-between; padding: 0 2rem;box-sizing: border-box;">
+        <p >
+            <a style="color: #fff; text-decoration: none; margin-left: 2rem;" href="/">
+                <i style="margin:0 0.3rem;" class="fa-solid fa-backward"></i>home
+            </a>
+        </p>
+        <a href="/admin/logout"><button  style="width: 4rem; height: 2rem; cursor: pointer; margin-top: 1rem; ">Logout</button></a>
     </div>
+    <h1 style="text-align: center; color: #fff;">Fitbucket admin dashboard</h1>
+   
     <section class="adminDash_sec">
+        <div class="sidebarToggle" >
+            <i class="fa-solid fa-bars" onclick="sidebarOpen()"></i>
+            <i class="fa-solid fa-xmark" id="x_mark" onclick="sidebarClose()"></i>
+
+        </div>
          <div class="assideDiv">
-                <h3>General</h3>
                 <ul>
-                    <li>Dashboard</li>
-                    <li>Messages</li>
+                    <li><a style=" color: #fff;" href="#dataDiv">Userlist</a></li>
+                    <li><a style=" color: #fff;" href="#dataDiv">Messages</a></li>
                     <li><a style=" color: #fff;" href="#blogsSection">Blogs</a></li>
                 </ul>
          </div>
-         <div class="dataDiv">
+         <div id="dataDiv" class="dataDiv">
             <div class="total_register_div">
                 <h3>Total registered users:</h3>
                 <h3><%=userData.length%></h3>
@@ -54,29 +59,34 @@
          </div>
 
     </section>
+   <section class="contactmsgSec">
+        
+   </section>
+<!-- -----------------------(blog_section)----------------------------- -->
+
     <section id="blogsSection">
-          <div style="display: flex; padding: 0 1rem;">
-            <h3 style="border: 1px solid #FD643D; padding: 1rem; margin: 0 1rem;">Total blogs: <%=blogData.length%></h3> 
-            <h3 style="border: 1px solid #FD643D; padding: 1rem; margin: 0 1rem;">Approved blogs: <%=verifiedBlogs.length%></h3> 
+          <div class="blog_stats" style="display: flex; padding: 0 1rem;">
+            <h3 style="padding: 1rem; margin: 0 1rem;">Total blogs: <%=blogData.length%></h3> 
+            <h3 style="padding: 1rem; margin: 0 1rem;">Approved blogs: <%=verifiedBlogs.length%></h3> 
           </div>
             <div class="blogContainer">
                 <% blogData.reverse().forEach((elem)=>{%>
                       <div class="innerBlogDiv" >
-                          <div style="display: flex; padding:0 1rem; justify-content: space-between;">
+                          <div style="display: flex; font-size: 0.8rem; padding:0 1rem; justify-content: space-between;">
                             <h3>Title: <%=elem.title%></h3>
                             <h3>Author: <%=elem.author%></h3>
                           </div>
                           <div  style="display: flex; white-space: pre-wrap; background-color: #272727; padding:0 1rem; justify-content: space-between;">
                             <p><%=elem.blogData%></p>
                           </div>
-                          <div style="display: flex;">
+                          <div style="display: flex; align-items: center;">
                              <form action="/blogpage/delete/<%=elem._id%>" method="POST">
-                                <button style="margin-left: 1.4rem;" class="signupBtn">remove</button>
+                                <button style="margin:1rem 1.4rem;" class="signupBtn">remove</button>
                              </form>
                              <form action="/blogpage/approve/<%=elem._id%>" method="POST">
                               
                                    <%if(elem.isVerified){%>
-                                      <p style=" border:1px solid #FD643D; padding: 0.2rem; position: absolute; right: 2rem;">approved</p>
+                                      <p style="border: 1px solid #272727; padding: 0.4rem; position: absolute; margin-bottom: 1rem; right: 2rem;">approved</p>
                                     <%}else{%>
                                         <button style="margin-left: 1.4rem;" class="signupBtn"> approve </button>
                                     <%}%>
@@ -86,5 +96,6 @@
                 <% })%>
             </div>
     </section>
+    <script src="../js/home.js"></script>
 </body>
 </html>

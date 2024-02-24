@@ -57,3 +57,24 @@ button.addEventListener('click',() =>{
   }
 
 });
+
+// --------(admin)-------
+
+function sidebarOpen(){
+     let assideDiv=document.querySelector('.assideDiv')
+      assideDiv.style.left="0rem";
+      let  faBars=document.querySelector('.fa-bars')
+      faBars.style.display="none"
+      let xMark=document.querySelector('#x_mark')
+      xMark.style.display="unset"
+}
+
+function sidebarClose(){
+  let assideDiv=document.querySelector('.assideDiv')
+   assideDiv.style.left="-12rem"
+   let  faBars=document.querySelector('.fa-bars')
+   faBars.style.display="unset"
+   let xMark=document.querySelector('#x_mark')
+    xMark.style.display="none"
+  
+}

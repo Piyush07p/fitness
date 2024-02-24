@@ -43,3 +43,16 @@
     background-color: var(--bgColor);
     border: 2px solid var(--secColor);
 }
+
+@media (max-width:720px){
+    .login_sec form{
+        width: 70%;
+    }
+}
+
+@media (max-width:480px){
+    .login_sec form{
+        width: 70%;
+        border-radius: 1rem;
+    }
+}
