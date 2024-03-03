@@ -10,7 +10,7 @@ const upload=multer({
             cb(null,"./public/uploads")
         },
         filename: function(req,file,cb){
-            cb(null,`${file.fieldname}-${Date.now()}.png`)
+            cb(null,`${file.fieldname}-${Date.now()}.jpg`)
         }
     })
 }).single("blogImg")

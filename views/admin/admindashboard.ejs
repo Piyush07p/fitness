@@ -30,7 +30,7 @@
          <div class="assideDiv">
                 <ul>
                     <li><a style=" color: #fff;" href="#dataDiv">Userlist</a></li>
-                    <li><a style=" color: #fff;" href="#dataDiv">Messages</a></li>
+                    <li><a style=" color: #fff;" href="#contactmsgSec">Messages</a></li>
                     <li><a style=" color: #fff;" href="#blogsSection">Blogs</a></li>
                 </ul>
          </div>
@@ -59,7 +59,9 @@
          </div>
 
     </section>
-   <section class="contactmsgSec">
+<!-- ---------------------(contact message)--------------------- -->
+
+   <section id="contactmsgSec" class="contactmsgSec">
          <div class="contactmsgDiv1">
              <h1>Contact message:</h1>
          </div>
@@ -79,12 +81,14 @@
 
          </div>
    </section>
+
 <!-- -----------------------(blog_section)----------------------------- -->
 
     <section id="blogsSection">
+        <h1 style="text-align:center;">Blogs</h1>
           <div class="blog_stats" style="display: flex; padding: 0 1rem;">
-            <h3 style="padding: 1rem; margin: 0 1rem;">Total blogs: <%=blogData.length%></h3> 
-            <h3 style="padding: 1rem; margin: 0 1rem;">Approved blogs: <%=verifiedBlogs.length%></h3> 
+            <h3 style="padding: 1rem; margin: 0 1rem; border: 1px solid #272727;">Total blogs: <%=blogData.length%></h3> 
+            <h3 style="padding: 1rem; margin: 0 1rem;  border: 1px solid #272727;">Approved blogs: <%=verifiedBlogs.length%></h3> 
           </div>
             <div class="blogContainer">
                 <% blogData.reverse().forEach((elem)=>{%>

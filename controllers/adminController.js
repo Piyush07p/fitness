@@ -49,6 +49,8 @@ async function handleAdminLogin(req,res){
             if(adminData.is_admin==1){
                 req.session.admin_id=adminData._id;
                 console.log(req.session.admin_id)
+                req.session.message=adminData.name;
+                req.session.isAdmin=adminData.is_admin
                 console.log("admin login success")
                 res.redirect('/admin/dashboard');
             }else{

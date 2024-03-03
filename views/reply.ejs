@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="/css/reply.css">
 </head>
 <body>
@@ -24,13 +25,31 @@
                         </span>
                     </h3>
                     <li><%=elem.reply%></li>
+                    
+                    <div  style="display: flex;" class="like_dislike">
+                        <form  action="/askquery/reply/like/<%=elem._id%>" method="POST">
+                           <button style="background-color: #111111; border: 1px solid #272727;" >
+                            <i class="fa-regular fa-thumbs-up">
+                                <%=elem.like%>
+                            </i>
+                           </button>
+                        </form>
+                         <form action="/askquery/reply/dislike/<%=elem._id%>" method="POST">
+                            <button style="background-color: #111111; border: 1px solid #272727;" >
+                                <i class="fa-regular fa-thumbs-down">
+                                    <%=elem.dislike%>
+                                </i>
+                            </button>
+                         </form>
+                    </div>
                     <form action="/askquery/reply/delete/<%=elem._id%>" method="post">
-                       <%if(elem.userName==uname){%>
-                        <button style="display: inline;">delete</button>
-                        <%}%>
-                    </form>
-                
+                        <%if(elem.userName==uname|| isAdmin==1){%>
+                         <button style="display: inline; margin: 1rem ;">delete</button>
+                         <%}%>
+                     </form>
                 </ul>
+               
+            
             <% }) %>
          <%}else{%>
              <p>No replies present</p>

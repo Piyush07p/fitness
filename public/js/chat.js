@@ -138,7 +138,7 @@ function removePop(ind){
     // replyTarea.value=""
     replyPopup.style.top="-20rem";
 
-
+return;
     
 }
 

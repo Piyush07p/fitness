@@ -28,8 +28,8 @@ class ControllerClass{
     static getQuery=async (req,res)=>{
         try{
             const result=await dataModel.find()
-            console.log(req.session.message)
-            res.render("chat",{queryData:result,msg:req.session.message})
+            console.log("sess-->",req.session.message)
+            res.render("chat",{queryData:result,msg:req.session.message,isAdmin:req.session.isAdmin})
         }catch(err){
             console.log(err)
         }
@@ -89,7 +89,7 @@ class ControllerClass{
             const result=await replyModel.find({queryId:req.params.id})
             console.log(result)
             if(result){
-                res.render("reply",{replyData:result,uname:req.session.message})
+                res.render("reply",{replyData:result,uname:req.session.message,isAdmin:req.session.isAdmin})
             }else{
                 res.render("reply",{message:"no replies present",uname:req.session.message})
             }
@@ -104,6 +104,32 @@ class ControllerClass{
         try{
             const result=await replyModel.findByIdAndDelete(req.params.id)
             res.redirect('/askquery')
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+    static updateLike=async (req,res)=>{
+        try{
+            const data=await replyModel.findById(req.params.id);
+
+            data.like=data.like+1
+            const result=await replyModel.findByIdAndUpdate(req.params.id,data)
+
+            res.redirect(`/askquery/reply/${data.queryId}`)
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+    static updateDislike=async (req,res)=>{
+        try{
+            const data=await replyModel.findById(req.params.id);
+            
+            data.dislike=data.dislike+1
+            const result=await replyModel.findByIdAndUpdate(req.params.id,data)
+
+            res.redirect(`/askquery/reply/${data.queryId}`)
         }catch(err){
             console.log(err)
         }

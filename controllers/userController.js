@@ -32,7 +32,7 @@ async function handleUserLogin(req,res){
         req.session.user_id=userData._id;
         console.log(req.session);
         req.session.message=userData.name
-        console.log(req.session.message);
+        req.session.isAdmin=userData.is_admin
         res.redirect('/askquery');
     }
 }

@@ -1,25 +1,32 @@
-const OpenAI = require("openai");
+// const { Configuration, OpenAIApi } = require('openai');
 
-async function createChat(){
-    const openai = new OpenAI({
-        apiKey: process.env.API_KEY,
-      });
-      
-      const response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            "role": "user",
-            "content": "which is the toughest programming language"
-          }
-        ],
-        temperature: 1,
-        max_tokens: 256,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-      });
-      return response;
-      
-}
-module.exports=createChat
+// // Create a Configuration object with your API key
+// const config = new Configuration({
+//   apiKey: process.env.API_KEY
+// });
+
+// // Initialize the OpenAIApi with the Configuration object
+// const openai = new OpenAIApi(config);
+
+// // Define an async function to run the prompt
+// const runPrompt = async () => {
+//   const prompt = 'how to treat stomach pain at home';
+
+//   try {
+//     // Make API call to generate completion
+//     const response = await openai.createCompletion({
+//       model: 'text-davinci-003',
+//       prompt: prompt,
+//       max_tokens: 65,
+//       temperature: 1,
+//     });
+
+//     // Extract the generated text from the response
+//     const aiData = response.data.choices[0].text;
+//     console.log(aiData);
+//   } catch (error) {
+//     console.error('Error:', error);
+//   }
+// };
+
+//  module.exports = runPrompt;

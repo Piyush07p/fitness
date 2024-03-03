@@ -23,7 +23,7 @@ const blogrouter=require('./routes/blogRoute.js')
 
 //*****************( )*********************
 
-const createChat=require('./chatgpt.js')
+const runPrompt=require('./chatgpt.js')
 
 
 //all middleware used
@@ -104,7 +104,7 @@ app.use('/blogpage',blogrouter)
 //database configuration
 const db_url=process.env.MONGO_URL
 connectDb(db_url)
-// createChat()
+// runPrompt()
 
 app.listen(process.env.PORT,()=>{
     console.log(`server running at port ${process.env.PORT}` )

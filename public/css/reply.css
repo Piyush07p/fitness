@@ -49,6 +49,13 @@
    border-radius: 0.5rem;
 
 }
+.like_dislike{
+    margin: 0 1rem;
+}
+.like_dislike i{
+    margin-right: 1rem;
+    cursor: pointer;
+}
 
 @media (max-width:600px){
     .replyPageSec div{
