@@ -203,6 +203,25 @@
     cursor: pointer; 
     transition: 0.5s ease ; 
 }
+
+/* -------(ask ai css)------------------ */
+
+.askAi{
+    padding:2rem 1rem;
+    border: 1px solid #272727;
+    width: 70%;
+    box-sizing: border-box;
+}
+.askAi button{
+    margin-top: 2rem ;
+    width: 5rem;
+    background-color: var(--secColor);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
 @media (max-width:800px) {
     .replyPopup{
         width: 60%;

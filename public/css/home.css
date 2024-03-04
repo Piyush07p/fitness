@@ -341,6 +341,51 @@ body{
    border-radius: 0.5rem;
 }
 
+.aiSection{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.aiDiv{
+   width: 50%;
+   padding: 1rem;
+   border: 2px solid #272727;
+   display: flex;
+   justify-content: center;
+}
+.aiDiv div{
+  width: 50%;
+}
+.aiDiv div img{
+width: 100%;
+}
+.aiDiv div p{
+  color: #fff;
+  margin: 1rem;
+}
+.aiDiv div a{
+    text-decoration: none;
+    color: #fff;
+}
+.aiDiv div a button{
+   width: 6rem;
+   padding: 0.5rem;
+   color: #fff;
+   border-radius: 0.2rem;
+   border: none;
+   margin: 1rem;
+   cursor: pointer;
+   background-color: var(--secColor);
+   transition: all ease 0.5s;
+}
+.aiDiv div a button:hover{
+  transform: scale(1.1);
+}
+
 
 /* ********************((media queries))********************/
 
@@ -394,7 +439,16 @@ body{
       width: 7rem;
   
     }
+    .aiDiv{
+      flex-direction: column;
+      width: 55%;
+   }
+   .aiDiv div{
+  
+    width: 100%;
+  }
 }
+
 @media screen and (max-width:480px) {
 
   #slider_section{
@@ -410,4 +464,12 @@ body{
   .feature_div {
   
   }
+  .aiDiv{
+    flex-direction: column;
+    width: 70%;
+ }
+ .aiDiv div{
+
+  width: 100%;
+}
 }

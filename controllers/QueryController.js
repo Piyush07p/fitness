@@ -3,7 +3,10 @@ const dataModel=require('../models/dbmodel.js')
 const replyModel=require('../models/replymodel.js')
 const moment=require('moment')
 
-
+const openAi=require('openai')
+const openai=new openAi({
+    apiKey:process.env.API_KEY
+})
 
 class ControllerClass{
 
@@ -67,6 +70,29 @@ class ControllerClass{
             console.log(err)
         }
     }
+
+//--------------------(ai-chat)------------------
+static askAiQuery=async(req,res)=>{
+    try {
+            const userPrompt=req.body.userPrompt
+            console.log("prompt-->",userPrompt)
+            const response=await openai.chat.completions.create({
+                model:'gpt-3.5-turbo',
+                messages:[{"role":"user","content":userPrompt}],
+                max_tokens:150
+        
+             })
+           res.render("askai",{aiReply:response.choices[0].message.content})
+           console.log(response.choices[0].message.content)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+static askai=async (req,res)=>{
+        res.render("askai",{aiReply:"nothing to show"})
+}
+
 
 // -------------------(replies)--------------------------
     static replyData=async(req,res)=>{

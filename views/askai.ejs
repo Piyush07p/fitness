@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/askai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <%- include('header')%>
+
+    <section class="askAiSection">
+        <h1>Chat with ai</h1>
+         <div class="askAiDiv">
+            <form action="/askquery/gptresponse" method="post">
+                <input required name="userPrompt" placeholder="Ask any query to ai" type="text"> <br>
+                <button >Ask AI</button>
+            </form>
+         </div>
+         <div class="aiReplyDiv">
+            <h3>Ai reply..  <i class="fa-solid fa-robot"></i></h3> <br>
+            <p>
+                <%=aiReply%>
+            </p>
+         </div>
+    </section>
+
+    <%- include('footer')%>
+</body>
+</html>
