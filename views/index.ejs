@@ -23,8 +23,16 @@
                     <li><a href="/task">Tasks</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                     <li class="authBtn" >
-                        <span  style="padding:1rem 1.2rem;color:orange; font-weight: bold; display: inline-block;"><%=name%> </span>
+                        
                         <%if(name){%>
+                            <span  style="padding:1rem 1.2rem;color:orange; font-weight: bold; display: inline-block;">
+                              <i style="color: #fff; margin-right: 0.5rem;" class="fa-solid fa-user"></i>
+                              <%if(name=="admin"){%> 
+                                <a href="/admin/dashboard"><%=name%></a>
+                             <%}else{%>
+                                <%=name%>
+                             <%}%>
+                            </span>
                             <a href="/userAuth/logout" ><button class="signupBtn">logout</button></a>
                         <%}else{%>
                         <a href="/userAuth/login"><button class="signupBtn">login</button></a>
@@ -48,7 +56,7 @@
     <section id="slider_section">
         <div class="slider_div">
             <h1>Welcome to <span style="color:#FD643D;">Fit Bucket</span></h1>
-            <p>Your path to a healthier, stronger you!</p>
+            <p>Transform your body, transform your life!</p>
         </div>
     </section>
 

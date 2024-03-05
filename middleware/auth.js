@@ -15,7 +15,7 @@ const isLogin=async (req,res,next)=>{
         console.log(err.message);
     }
 }
-//-------------(middleware to check if user is logged in like the comment)--------------
+//-------------(middleware to check if user is logged in to like the comment)--------------
 
 const isLoginForLike= async (req,res,next)=>{
     try{

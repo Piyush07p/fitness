@@ -1,7 +1,7 @@
 const express=require('express');
 const blogrouter=express.Router();
 const multer=require('multer');
-
+const path=require('path')
 const {createBlog,approveBlog,deleteBlog,openFullblog} =require('../controllers/blogController')
 
 const upload=multer({
@@ -10,7 +10,7 @@ const upload=multer({
             cb(null,"./public/uploads")
         },
         filename: function(req,file,cb){
-            cb(null,`${file.fieldname}-${Date.now()}.jpg`)
+            cb(null,`${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`)
         }
     })
 }).single("blogImg")

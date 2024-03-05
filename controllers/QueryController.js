@@ -16,7 +16,7 @@ class ControllerClass{
         const data=new dataModel({
             name:req.body.name,
             askQuery:req.body.textarea,
-            currentTime:moment().toString()
+            currentTime:moment().format('MMMM Do YYYY, h:mm:ss a' ).toString()
         })
         await data.save()
         console.log("query added successfully")
@@ -101,7 +101,7 @@ static askai=async (req,res)=>{
                 queryId:req.body.qid,
                 userName:req.body.name,
                 reply:req.body.replies,
-                currentTime:moment().toString()
+                currentTime:moment().format('MMMM Do YYYY, h:mm:ss a' ).toString()
             })
             await data.save()
             res.redirect("/askquery")

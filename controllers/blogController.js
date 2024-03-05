@@ -3,12 +3,13 @@ const moment=require('moment')
 async function createBlog(req,res){
     try {
         console.log(req.body)
+        const blogImage=req.file.filename
         const resp=await blogModel.create({
             title:req.body.title,
             author:req.body.author,
             blogData:req.body.blogData,
-            blogImg:req.file.filename,
-            createdTime:moment().toString()
+            blogImg:blogImage,
+            createdTime:moment().format('MMMM Do YYYY, h:mm:ss a' ).toString()
         })
         res.redirect('/blogs');
         // res.json({
