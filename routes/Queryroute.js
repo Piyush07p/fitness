@@ -18,8 +18,8 @@ router.get('/askai',ControllerClass.askai)
 router.get('/reply/:id',ControllerClass.getReply)
 router.post('/reply/:id',ControllerClass.replyData)
 router.post('/reply/delete/:id',ControllerClass.delReply)
-router.post('/reply/like/:id',ControllerClass.updateLike)
-router.post('/reply/dislike/:id',ControllerClass.updateDislike)
+router.post('/reply/like/:id',auth.isLoginForLike,ControllerClass.updateLike)
+router.post('/reply/dislike/:id',auth.isLoginForLike,ControllerClass.updateDislike)
 
 
 

@@ -1,14 +1,33 @@
-
+const replyModel=require('../models/replymodel')
 const isLogin=async (req,res,next)=>{
     try{
         console.log(req.session)
         if(req.session.user_id){
             res.redirect('/askquery')
+            next();
         }
         else{
             res.redirect('/userAuth/login');
         }
-        next();
+        
+    }
+    catch(err){
+        console.log(err.message);
+    }
+}
+//-------------(middleware to check if user is logged in like the comment)--------------
+
+const isLoginForLike= async (req,res,next)=>{
+    try{
+        const data=await replyModel.findById(req.params.id);
+        if(req.session.user_id){
+            res.redirect(`/askquery/reply/${data.queryId}`)
+            next();
+        }
+        else{
+            res.redirect('/userAuth/login');
+        }
+        
     }
     catch(err){
         console.log(err.message);
@@ -34,5 +53,6 @@ const isLogout=async(req,res,next)=>{
 
 module.exports={
     isLogin,
-    isLogout
+    isLogout,
+    isLoginForLike
 }
