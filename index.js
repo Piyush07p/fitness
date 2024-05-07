@@ -48,9 +48,15 @@ app.set("view engine","ejs")
 
 app.get('/',(req,res)=>{
      if(req.cookies.jwt_token==""){
+        console.log("homepage")
         return res.render('index',{name:""})
      }
-     let userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+
+    let userInfo='';
+    if(req.cookies.jwt_token){
+        userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+    }
+  
      console.log("home-->",userInfo)
      
     res.render('index',{name:userInfo.name})
