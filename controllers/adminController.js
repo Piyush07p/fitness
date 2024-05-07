@@ -3,6 +3,7 @@ const userModel=require('../models/userModel')
 const blogModel=require('../models/blogmodel')
 const contactModel=require('../models/contactModel')
 const bcrypt=require('bcryptjs')
+const jwt =require('jsonwebtoken')
 
 async function adminLogin(req,res){
     try{
@@ -23,7 +24,9 @@ async function adminDashboard(req,res){
         const contactMsg=await contactModel.find()
         const verifiedBlogs=blogs.filter((e)=>e.isVerified===true)
         const adminData=await userModel.find({is_admin:1})
-        if(req.session.admin_id){
+        // let validToken=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+
+        if(true){
             res.render("admindashboard",{
                 userData:alluser,
                 blogData:blogs,
@@ -47,10 +50,20 @@ async function handleAdminLogin(req,res){
         const isadminMatch=await bcrypt.compare(password,adminData.password);
         if(isadminMatch){
             if(adminData.is_admin==1){
-                req.session.admin_id=adminData._id;
-                console.log(req.session.admin_id)
-                req.session.message=adminData.name;
-                req.session.isAdmin=adminData.is_admin
+                let token=jwt.sign({
+                    user_id:adminData._id,
+                    name:adminData.name,
+                    isAdmin:adminData.is_admin
+                },process.env.JWT_SECRET)
+              
+        
+                res.cookie('jwt_token',token)
+                console.log(token)
+                // req.session.admin_id=adminData._id;
+
+                // req.session.message=adminData.name;
+                // req.session.isAdmin=adminData.is_admin
+    
                 console.log("admin login success")
                 res.redirect('/admin/dashboard');
             }else{

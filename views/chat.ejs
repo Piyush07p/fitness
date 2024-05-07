@@ -18,12 +18,12 @@
     <section class="chat_sec">
        
         <div style="height: 5rem; margin: 0 1rem;">
-            <h2>Welcome <span style="color: red;"><%=msg %></span>, post your any fitness query here..</h2>
+            <h2>Welcome <span style="color: red;"><%=name %></span>, post your any fitness query here..</h2>
         </div>
 
         <div class="chat_inp">
             <form class="chat_inp_form" method="post">
-                <input name="name" value="<%=msg%>" required placeholder="enter your name.."><br>
+                <input name="name" value="<%=name%>" required placeholder="enter your name.."><br>
                 <textarea name="textarea" placeholder="enter your query.."></textarea><br>
                 <button class="createBtn">post</button>
             </form>
@@ -55,13 +55,13 @@
                     </div>
                     <div>
                         <form style="display: inline;" action="/askquery/edit/<%=elem._id%>" method="get">
-                            <% if(elem.name==msg){%>
+                            <% if(elem.name==name){%>
                                 <button>edit</button>
                             <%}%>
                         </form>
                         <button onclick="replyfunc(<%=ind%>)">reply</button>
                         <form style="display: inline;" action="/askquery/delete/<%=elem._id%>" method="post">
-                           <% if(isAdmin==1||elem.name==msg){%>
+                           <% if(isAdmin==1||elem.name==name){%>
                             <button>delete</button>
                             <%}%>
                         </form>
@@ -76,7 +76,7 @@
                             <form action="/askquery/reply/<%=elem._id%>" method="post">
                                     <p class="popPara">Add reply</p>
                                     <input style="display: none;" type="text" name="qid" value="<%=elem._id%>" id="">
-                                    <input  type="text" name="name" value="<%=msg%>" id="">
+                                    <input  type="text" name="name" value="<%=name%>" id="">
                                     <textarea placeholder="enter your reply here.." name="replies"></textarea><br>
                                     <div>
                                         <button type="submit" class="popBtn">add</button>

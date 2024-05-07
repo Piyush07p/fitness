@@ -3,6 +3,7 @@ const express= require('express')
 const path=require('path')
 const cors=require('cors')
 const {connectDb}=require('./db/connectdb')
+const jwt=require('jsonwebtoken')
 
 const app=express();
 const config=require('./config/config.js')
@@ -11,6 +12,12 @@ const session=require('express-session');
 app.use(session({secret:config.secret_key}))
 
 const auth=require('./middleware/auth.js')
+
+//--------------(setting cookie-parser)---------------
+
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
 
 
 // getting all routes used in our project
@@ -40,12 +47,18 @@ app.use(cors())
 app.set("view engine","ejs")
 
 app.get('/',(req,res)=>{
-    res.render('index',{name:req.session.message})
+     if(req.cookies.jwt_token==""){
+        return res.render('index',{name:""})
+     }
+     let userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+     console.log("home-->",userInfo)
+     
+    res.render('index',{name:userInfo.name})
 })
 
 app.get('/chat',(req,res)=>{
     // res.sendFile(path.join(__dirname,'views','chat.ejs'))
-    res.render('chat')
+    res.render('chat',{user:""})
 })
 
 const blogModel=require('./models/blogmodel.js')

@@ -1,5 +1,7 @@
 const userModel=require('../models/userModel')
 const bcrypt=require('bcryptjs')
+const fs=require('fs')
+const jwt=require('jsonwebtoken')
 
 async function handleUserSignup(req,res){
     const {name,email,password}=req.body;
@@ -14,7 +16,7 @@ async function handleUserSignup(req,res){
     if(signupStatus){
         res.render("signup",{message:"you are registered successfully!!"})
     }else{
-        res.render("signup",{message:"Something  bad happen!!"})
+        res.render("signup",{message:"Something  bad happened!!"})
     }
 }
 
@@ -29,10 +31,20 @@ async function handleUserLogin(req,res){
          res.render("login",{message:"invalid credentials"})
     }
     else{
-        req.session.user_id=userData._id;
-        console.log(req.session);
-        req.session.message=userData.name
-        req.session.isAdmin=userData.is_admin
+        let token=jwt.sign({
+            user_id:userData._id,
+            name:userData.name,
+            isAdmin:userData.is_admin
+        },process.env.JWT_SECRET)
+
+        res.cookie('jwt_token',token)
+
+        // req.session.user_id=userData._id;
+        // console.log(req.session);
+        // req.session.message=userData.name
+        // req.session.isAdmin=userData.is_admin
+        console.log(userData)
+        req.user=userData
         res.redirect('/askquery');
     }
 }

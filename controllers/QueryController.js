@@ -31,8 +31,8 @@ class ControllerClass{
     static getQuery=async (req,res)=>{
         try{
             const result=await dataModel.find()
-            console.log("sess-->",req.session.message)
-            res.render("chat",{queryData:result,msg:req.session.message,isAdmin:req.session.isAdmin})
+            console.log("userDetails-->",req.currentUser)
+            res.render("chat",{queryData:result,name:req.currentUser.name,isAdmin:req.session.isAdmin})
         }catch(err){
             console.log(err)
         }
