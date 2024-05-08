@@ -63,24 +63,27 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/chat',(req,res)=>{
-    // res.sendFile(path.join(__dirname,'views','chat.ejs'))
     res.render('chat',{user:""})
 })
 
 const blogModel=require('./models/blogmodel.js')
 app.get('/blogs',async (req,res)=>{
-    // res.sendFile(path.join(__dirname,'views','blogs.ejs'))
     const blogData=await blogModel.find()
     const filteredData=blogData.filter((elem)=>elem.isVerified===true)
+
+    let  userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
     res.render('blogs',{
-        message:req.session.message,
+        userName:userInfo.name,
         data:filteredData
 
     })
 })
 
-app.get('/createBlog',(req,res)=>{
-    res.render('createBlog')
+app.get('/createBlog',auth.isLogin,(req,res)=>{
+    let  userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+    res.render('createBlog',{
+        userName:userInfo.name
+    })
 })
 
 app.get('/task',(req,res)=>{

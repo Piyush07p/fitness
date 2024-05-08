@@ -18,7 +18,7 @@
               </div>
               <div>
                 <label>Author name</label> <br> <br>
-                <input name="author" type="text" placeholder="enter the author name">
+                <input name="author" readonly value="<%=userName%>" type="text" placeholder="enter the author name">
             </div>
             <div>
                 <label>Write your blog</label> <br> <br>
@@ -29,7 +29,7 @@
                 <input required name="blogImg" style="background-color:#272727; margin-left: -1rem;"  type="file">
             </div>
             <div>
-                <button class="signupBtn">Submit</button>
+                <button style="margin-left: 1rem; border-radius: 0.3rem;" class="signupBtn">Submit</button>
             </div>
          </form>
     </main>

@@ -20,13 +20,12 @@
             <div class="mainDiv">
                 <div style="display:flex; justify-content: space-between ; align-items: center;">
                     <div>
-                        <h3>Welcome <span style="color: red;">
-                                <%=message%>
-                            </span>, you can read fitness blog here..</h3>
-                        
+                        <h3>Hello <span style="color: red;">
+                                <%=userName%>
+                        </span>, you can read fitness blog here..</h3>
                     </div>
                     <a style="color: #fff; text-decoration: none;" href="/createBlog">
-                        <button  class="create_btn">Create Blog</button>
+                        <button  class="create_btn" style="border-radius: 0.3rem;">Create Blog</button>
                     </a>           
                    
                 </div>
@@ -38,7 +37,7 @@
                                         <%=index+1%>) <%=elem.title%>
                                     </h2>
                                     <p style="line-height: 0;">
-                                        Author: <%=elem.author%>
+                                        <span style="color: #FD643D;">Author:</span> <%=elem.author%>
                                     </p>
                                     <div class="blogParaContainer">
                                         <p class="blogHeadline">

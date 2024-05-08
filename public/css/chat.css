@@ -97,7 +97,6 @@
     border-radius: 0.4rem;
     border:2px solid ;
     /* background-color: #242424; */
-    /* background-color: rgba(0, 0, 0,0.1); */
     padding: 0 1rem;
 }
 .chat_inp_form input{
@@ -240,6 +239,9 @@
     }
     .query_box{
         width: 100%;
+    }
+    .askAi{
+       width: 90%;
     }
     .curr_time{
         font-size: 0.5rem;
