@@ -70,8 +70,10 @@ const blogModel=require('./models/blogmodel.js')
 app.get('/blogs',async (req,res)=>{
     const blogData=await blogModel.find()
     const filteredData=blogData.filter((elem)=>elem.isVerified===true)
-
-    let  userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+    let userInfo=''
+    if(req.cookies.jwt_token){
+        userInfo=jwt.verify(req.cookies.jwt_token,process.env.JWT_SECRET)
+    }
     res.render('blogs',{
         userName:userInfo.name,
         data:filteredData
