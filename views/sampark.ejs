@@ -28,11 +28,11 @@
        <main>
         <form action="/contact" class="formBox" method="post">
 
-                  <label>Full Name</label>
-                  <input name="name" placeholder="enter name" type="text" required>
+                  <label>Name</label>
+                  <input name="name" value="<%=userInfo.name%>"  placeholder="enter name" type="text" required>
                
                   <label>Email id</label>
-                  <input name="email" placeholder="enter email" type="email" required>
+                  <input name="email" value="<%=userInfo.email%>" placeholder="enter email" type="email" required>
                   <label>Enter your Message...</label>
                   <textarea  placeholder="enter your message.." name="message"></textarea>
                   <button class="formBtn">submit</button>

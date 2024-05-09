@@ -34,6 +34,7 @@ async function handleUserLogin(req,res){
         let token=jwt.sign({
             user_id:userData._id,
             name:userData.name,
+            email:userData.email,
             isAdmin:userData.is_admin
         },process.env.JWT_SECRET)
 
