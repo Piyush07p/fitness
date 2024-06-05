@@ -3,10 +3,13 @@ const dataModel=require('../models/dbmodel.js')
 const replyModel=require('../models/replymodel.js')
 const moment=require('moment')
 
-const openAi=require('openai')
-// const openai=new openAi({
-//     apiKey:process.env.API_KEY
-// })
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+// Access your API key as an environment variable (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+
+// The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
 class ControllerClass{
 
@@ -72,26 +75,25 @@ class ControllerClass{
     }
 
 //--------------------(ai-chat)------------------
-// static askAiQuery=async(req,res)=>{
-//     try {
-//             const userPrompt=req.body.userPrompt
-//             console.log("prompt-->",userPrompt)
-//             const response=await openai.chat.completions.create({
-//                 model:'gpt-3.5-turbo',
-//                 messages:[{"role":"user","content":userPrompt}],
-//                 max_tokens:150
+static askAiQuery=async(req,res)=>{
+    try {
+            const userPrompt=req.body.userPrompt
+            console.log("prompt-->",userPrompt)
         
-//              })
-//            res.render("askai",{aiReply:response.choices[0].message.content})
-//            console.log(response.choices[0].message.content)
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+                const result = await model.generateContent(userPrompt);
+                const response = await result.response;
+                const text = response.text();
+                console.log(text);
+              
+           res.render("askai",{aiReply:text})
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-// static askai=async (req,res)=>{
-//         res.render("askai",{aiReply:"nothing to show"})
-// }
+static askai=async (req,res)=>{
+        res.render("askai",{aiReply:"nothing to show"})
+}
 
 
 // -------------------(replies)--------------------------
