@@ -11,8 +11,8 @@ router.post('/delete/:id',ControllerClass.delQuery)
 
 // for ai
 
-router.post('/gptresponse',ControllerClass.askAiQuery)
-router.get('/askai',auth.isLogin,ControllerClass.askai)
+// router.post('/gptresponse',ControllerClass.askAiQuery)
+// router.get('/askai',auth.isLogin,ControllerClass.askai)
 // for reply functionality
 
 router.get('/reply/:id',ControllerClass.getReply)
