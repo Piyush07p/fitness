@@ -2,6 +2,7 @@ const session = require('express-session');
 const dataModel=require('../models/dbmodel.js')
 const replyModel=require('../models/replymodel.js')
 const moment=require('moment')
+const openai=require('openai')
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
