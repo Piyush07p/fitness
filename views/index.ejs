@@ -30,7 +30,7 @@
                     <li class="authBtn" >
                         
                         <%if(name){%>
-                            <span class=""  style="padding:1rem 0.2rem;color:orange;  font-weight: bold; display: inline-block;">
+                            <span class=""  style="padding:1rem 0.2rem;color:#FD643D;  font-weight: bold; display: inline-block;">
                               <i style="color: #fff; margin-right: 0.5rem;" class="fa-solid fa-user"></i>
                               <%if(name=="admin"){%> 
                                 <a href="/admin/dashboard"><%=name%></a>
@@ -38,10 +38,10 @@
                                 <%=name%>
                              <%}%>
                             </span>
-                            <a href="/userAuth/logout" ><button class="signupBtn bg-[#FD643D] rounded margin:0rem 1rem">Logout</button></a>
+                            <a href="/userAuth/logout" ><button class="signupBtn bg-[#FD643D] rounded-2xl margin:0rem 1rem">Logout</button></a>
                         <%}else{%>
-                        <a href="/userAuth/login"><button class="signupBtn bg-[#FD643D] mx-2 rounded">Login</button></a>
-                        <a href="/userAuth/signup"><button class="signupBtn bg-[#FD643D] rounded">Signup</button></a>
+                        <a href="/userAuth/login"><button class="loginBtn  mx-2 ">Login</button></a>
+                        <a href="/userAuth/signup"><button class="signupBtn bg-[#FD643D] ">Signup</button></a>
                         <%}%>
                         
                     </li>
@@ -87,11 +87,11 @@
                              <img src="assets/slideImg2.jpg" alt="">
                         </div>
                         <div class="div_detail">
-                                <p>Complete fitness task as per your preference</p>
+                                <p>Post fitness related queries and get it resolved by others</p>
                         </div>
                         <div class="div2">
-                               <h3>Complete fitness task</h3>
-                               <a href="/task">
+                               <h3>Post your fitness query</h3>
+                               <a href="/askquery">
                                 <button class="rounded">Visit</button>
 
                                </a>

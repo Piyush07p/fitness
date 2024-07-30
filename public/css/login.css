@@ -19,17 +19,24 @@
 .login_sec form{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
     border:1px solid rgba(0,0,0,0.3);
     height: 16rem;
     padding:3rem 1rem;
     background-color: var(--boxColor);
+    justify-content: center;
+    
 }
 
 .login_sec form input{
-    width: 80%;
-    height: 1.8rem;
+    width: 90%;
+    height: 2.8rem;
     outline: none;
+    padding: 0 1rem;
+    color: #fff;
+    border: none;
+
+    background-color: #212121;
 
 }
 
@@ -37,8 +44,9 @@
     width: var(--btnWidth);
     background-color: var(--secColor);
     color: #fff;
-    height: 2rem;
+    height: 2.6rem;
     cursor: pointer;
+    border-radius: 2rem;
     border: none;
 }
 .login_sec form button:hover{
